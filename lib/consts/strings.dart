@@ -35,22 +35,23 @@ oldpassword = "Old Password";
 
 //categories section of dog
 const labradogGroup = "Labradog Group",
-    houndGroup = "Hound Group",
-    workingGroup = "Working Group",
-    terrierGroup = "Terrier Group",
-    toyGroup = "Toy Group",
-    nonSportingGroup = "Non-Sporting Group",
-    workouttitle = "Workout Title";
+    germanShepherdGroup = "German Shepherd Group",
+    poodleGroup = "Poodle Group",
+    rottweilerGroup = "Rottweiler Group",
+    bulldogGroup = "Bulldog Group",
+    pomeranianGroup = "Pomeranian Group",
+    dobermanPinscher = "Doberman Pinscher",
+    goldenRetriever=   "Golden Retriever";
 
 //categories section of cat
-const shorthairedCats = "Short-haired Cats",
-    longhairedCats = "Long-haired Cats",
-    semilonghairedCats = "Semi-long-haired Cats",
-    hairlessCats = "Hairless Cats",
-    hybridCats = "Hybrid Cats";
+const shorthairedCats = "Short-haired Group",
+    longhairedCats = "Long-haired Group",
+    semilonghairedCats = "Semi-long-haired Group",
+    hairlessCats = "Hairless Group",
+    hybridCats = "Hybrid Group";
 
 //categories section of fish
-const freshwaterfish = "Freshwater fish",
+const freshwaterfish = "Freshwater Group",
     saltwaterFish = "Saltwater Fish",
     tropicalFish = "Tropical Fish";
 

@@ -12,11 +12,11 @@ import '../consts/styles.dart';
 import '../controller/product_controller.dart';
 
 
-class DogItemDetails extends StatelessWidget {
+class FishItemDetails extends StatelessWidget {
   final String? title;
   final dynamic data;
 
-  const DogItemDetails({Key? key, required this.title, this.data})
+  const FishItemDetails({Key? key, required this.title, this.data})
       : super(key: key);
 
   @override

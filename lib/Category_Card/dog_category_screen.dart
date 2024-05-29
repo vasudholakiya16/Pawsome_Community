@@ -27,7 +27,7 @@ class DogCategoryScreen extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: GridView.builder(
                 shrinkWrap: true,
-                itemCount: 6,
+                itemCount: 8,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: 20,

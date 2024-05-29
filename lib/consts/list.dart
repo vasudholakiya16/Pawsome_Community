@@ -9,12 +9,13 @@ const slidersList = [imgSlider2,imgSlider1, imgSlider3];
 //categories section
 const categoriesList = [
   labradogGroup,
-  houndGroup,
-  workingGroup,
-  terrierGroup,
-  toyGroup,
-  nonSportingGroup,
-  workouttitle,
+  germanShepherdGroup,
+  poodleGroup,
+  rottweilerGroup,
+  bulldogGroup,
+  pomeranianGroup,
+  dobermanPinscher,
+  goldenRetriever,
 ];
 const catCategoriesList = [
   shorthairedCats,
@@ -40,6 +41,8 @@ d1,
   d4,
   d5,
   d6,
+  d7,
+  d8
 ];
 
 const catCategoriesImages = [

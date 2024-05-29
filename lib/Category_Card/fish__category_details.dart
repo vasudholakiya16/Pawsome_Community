@@ -144,7 +144,7 @@ class _FishDogCategoryDetailState extends State<FishDogCategoryDetail> {
                                   .make()
                                   .onTap(() {
                                 // controller.checkIfFav(data[index]);
-                                Get.to(() => (
+                                Get.to(() => FishItemDetails(
                                     title: "${data[index]['product_name']}",
                                     data: data[index]));
                               }

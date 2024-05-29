@@ -140,12 +140,14 @@ flutter:
     - assets/images/d1.jpg
     - assets/images/d2.jpg
     - assets/images/d3.jpg
-    - assets/images/d4.jpg
+    - assets/images/d4.webp
     - assets/images/d5.jpg
     - assets/images/d6.jpg
+    - assets/images/d7.webp
+    - assets/images/d8.webp
     - assets/images/c1.jpeg
     - assets/images/c2.webp
-    - assets/images/c3.jpg
+    - assets/images/c3.jpeg
     - assets/images/c4.jpg
     - assets/images/c5.webp
     - assets/images/f1.webp

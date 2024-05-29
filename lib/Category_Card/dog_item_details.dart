@@ -197,7 +197,7 @@ class DogItemDetails extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                                 style: const TextStyle(
                                   color: Colors.black,
-                                  fontSize: 22,
+                                  fontSize: 20,
                                 ),
                               ),
                             ],
@@ -211,7 +211,7 @@ class DogItemDetails extends StatelessWidget {
                             children: [
                               "Sex".text
                                   .color(Colors.black)
-                                  .fontFamily(semibold).size(16)
+                                  .fontFamily(semibold).size(14)
                                   .make(),
                               10.heightBox,
 
@@ -246,7 +246,7 @@ class DogItemDetails extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                                 style: const TextStyle(
                                   color: Colors.black,
-                                  fontSize: 22,
+                                  fontSize: 20,
                                 ),
                               ),
                             ],
@@ -260,7 +260,7 @@ class DogItemDetails extends StatelessWidget {
                             children: [
                               "Age".text
                                   .color(Colors.black)
-                                  .fontFamily(semibold).size(16)
+                                  .fontFamily(semibold).size(14)
                                   .make(),
                               10.heightBox,
 
@@ -294,7 +294,7 @@ class DogItemDetails extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                                 style: const TextStyle(
                                   color: Colors.black,
-                                  fontSize: 22,
+                                  fontSize: 20,
                                 ),
                               ),
                             ],
@@ -308,7 +308,7 @@ class DogItemDetails extends StatelessWidget {
                             children: [
                               "Weight".text
                                   .color(Colors.black)
-                                  .fontFamily(semibold).size(16)
+                                  .fontFamily(semibold).size(14)
                                   .make(),
                               10.heightBox,
 
