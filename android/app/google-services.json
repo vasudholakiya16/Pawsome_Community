@@ -1,0 +1,278 @@
+{
+  "project_info": {
+    "project_number": "1055546313423",
+    "project_id": "stripesetupproject",
+    "storage_bucket": "stripesetupproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055546313423:android:336ad4334070c3dd1505ba",
+        "android_client_info": {
+          "package_name": "com.example.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055546313423-5kmfam4vmbfd4e2l132ukti6s50smf3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn2K_SFGuLMqQQlGZZu_fY1GMh4XZBMWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055546313423-5kmfam4vmbfd4e2l132ukti6s50smf3s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1055546313423-0hv6j1710tennqjg99b3lg3uhqoivptg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chatApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055546313423:android:59502a1952e52db01505ba",
+        "android_client_info": {
+          "package_name": "com.example.chat_application_in_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055546313423-27uq6m2gmk3euseq351rgc9k54gh88qj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chat_application_in_flutter",
+            "certificate_hash": "466c39851bc329e8e9138bde50b6e3798abb2176"
+          }
+        },
+        {
+          "client_id": "1055546313423-5kmfam4vmbfd4e2l132ukti6s50smf3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn2K_SFGuLMqQQlGZZu_fY1GMh4XZBMWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055546313423-5kmfam4vmbfd4e2l132ukti6s50smf3s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1055546313423-0hv6j1710tennqjg99b3lg3uhqoivptg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chatApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055546313423:android:1fe6a4adc8d4c56b1505ba",
+        "android_client_info": {
+          "package_name": "com.example.chat_board_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055546313423-5kmfam4vmbfd4e2l132ukti6s50smf3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn2K_SFGuLMqQQlGZZu_fY1GMh4XZBMWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055546313423-5kmfam4vmbfd4e2l132ukti6s50smf3s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1055546313423-0hv6j1710tennqjg99b3lg3uhqoivptg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chatApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055546313423:android:20441f1a8f131b5c1505ba",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce_with_flutter_firebase_and_stripe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055546313423-5kmfam4vmbfd4e2l132ukti6s50smf3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn2K_SFGuLMqQQlGZZu_fY1GMh4XZBMWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055546313423-5kmfam4vmbfd4e2l132ukti6s50smf3s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1055546313423-0hv6j1710tennqjg99b3lg3uhqoivptg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chatApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055546313423:android:ff5c580bdfaf894a1505ba",
+        "android_client_info": {
+          "package_name": "com.example.pass_app_main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055546313423-5kmfam4vmbfd4e2l132ukti6s50smf3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn2K_SFGuLMqQQlGZZu_fY1GMh4XZBMWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055546313423-5kmfam4vmbfd4e2l132ukti6s50smf3s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1055546313423-0hv6j1710tennqjg99b3lg3uhqoivptg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chatApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055546313423:android:169630fc3b87b30e1505ba",
+        "android_client_info": {
+          "package_name": "com.example.pass_app_ultron_techonology"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055546313423-5kmfam4vmbfd4e2l132ukti6s50smf3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn2K_SFGuLMqQQlGZZu_fY1GMh4XZBMWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055546313423-5kmfam4vmbfd4e2l132ukti6s50smf3s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1055546313423-0hv6j1710tennqjg99b3lg3uhqoivptg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chatApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055546313423:android:4bc1aede535cad441505ba",
+        "android_client_info": {
+          "package_name": "com.example.untitled3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055546313423-46tilf9nm3jc5n06j045fg1g82ertm31.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.untitled3",
+            "certificate_hash": "466c39851bc329e8e9138bde50b6e3798abb2176"
+          }
+        },
+        {
+          "client_id": "1055546313423-5kmfam4vmbfd4e2l132ukti6s50smf3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn2K_SFGuLMqQQlGZZu_fY1GMh4XZBMWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055546313423-5kmfam4vmbfd4e2l132ukti6s50smf3s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1055546313423-0hv6j1710tennqjg99b3lg3uhqoivptg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chatApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,1082 @@
+[
+  {
+    "Dog": [
+      {
+        "name": "Labrador Group",
+        "subcategory": [
+          {
+            "id": "01",
+            "name": "Retriever",
+            "Price": "$200",
+            "img": "https://dogtime.com/wp-content/uploads/sites/12/2024/01/GettyImages-590608307-e1706029609404.jpg?w=1024",
+            "Sex": "Male/Female",
+            "Age": "12 years",
+            "Weight": "55 to 80 pounds",
+            "Height": "21 to 24 inches",
+            "Detail": "Labrador Retrievers, often simply called Labs, are one of the most popular dog breeds worldwide, known for their friendly and outgoing nature. With their iconic floppy ears, expressive eyes, and wagging tails, Labs exude charm and warmth."
+          },
+          {
+            "id": "02",
+            "name": "Spaniels",
+            "Price": "$200",
+            "img": "https://www.akc.org/wp-content/uploads/2017/11/Cocker-Spaniel-laying-down-in-the-grass.jpg",
+            "Sex" : "Male/Female",
+            "Age": "10 years",
+            "Weight": "25 to 30 pounds",
+            "Height": "14.5-15.5 inches",
+            "Detail": "A spaniel is a type of gun dog. Spaniels were especially bred to flush game out of denser brush. By the late 17th century, spaniels had been specialized into water and land breeds."
+          },
+          {
+            "id": "03",
+            "name": "Hunt",
+            "Price": "$300",
+            "img": "https://diamondpet.storage.googleapis.com/wp-content/uploads/2020/11/22094827/black-labrador-dog-running-through-shallow-pond-110620.jpg",
+            "Sex" : "Male/Female",
+            "Age": "11 years",
+            "Weight": "25 to 30 pounds",
+            "Height": "21.5 to 24.5 inches",
+            "Detail": "This incredibly friendly and adaptable breed can fit into almost any situation, provided you have the ability to burn off its copious amounts of energy."
+          },
+          {
+            "id": "04",
+            "name": "Pointer & Setter",
+            "Price": "$500",
+            "img": "https://dogtime.com/wp-content/uploads/sites/12/2019/09/lab-pointer-mixed-dog-breed-pictures-cover.jpg",
+            "Sex" : "Male/Female",
+            "Age": "13 years",
+            "Weight": "35 to 80 pounds",
+            "Height": "22 to 28 inches",
+            "Detail": "Pointer is a mixed breed dog — a cross between the Labrador Retriever and Pointer dog breeds. Energetic, loyal, and intelligent, these pups inherited some of the best qualities from both of their parents."
+          }
+        ]
+      },
+      {
+        "name": "German Shepherd Group",
+        "subcategory": [
+          {
+            "id": "05",
+            "name": "Working Line",
+            "Price": "$300",
+            "img": "https://cdn.shopify.com/s/files/1/2456/1591/files/dreamstime_l_112364949_62cb3e64-dd7d-4bd2-aaf8-c695db4334b6_480x480.jpg?v=1608224043",
+            "Sex" : "Male/Female",
+            "Age": "9 years",
+            "Weight": "65 to 90 pounds",
+            "Height": "24 to 26 inches",
+            "Detail": "The working line has a straight back, compact body, and powerful muscles and is built for stamina and endurance."
+          },
+          {
+            "id": "06",
+            "name": "Show Line",
+            "Price": "$500",
+            "img": "https://www.akc.org/wp-content/uploads/2017/11/German-Shepherd-on-White-00.jpg",
+            "Sex" : "Male/Female",
+            "Age": "10 years",
+            "Weight": "65 to 90 pounds",
+            "Height": "24 to 26 inches",
+            "Detail": "Show line German Shepherds are generally bred to be calm, well-mannered, and stable. They are less intense in their drive compared to working lines, making them more suited as family pets and companions."
+          }
+        ]
+      },
+      {
+        "name": "Poodle Group",
+        "subcategory": [
+          {
+            "id": "07",
+            "name": "Standard",
+            "Price": "$300",
+            "img": "https://cdn.britannica.com/39/233239-050-50C0C3C5/standard-poodle-dog.jpg",
+            "Sex" : "Male/Female",
+            "Age": "12 years",
+            "Weight": "40 to 70 pounds",
+            "Height": "15 inches",
+            "Detail": "The working line has a straight back, compact body, and powerful muscles and is built for stamina and endurance."
+          },
+          {
+            "id": "08",
+            "name": "Miniature",
+            "Price": "$500",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ09PUFzQUZhimHd5WhvoMpwbw6n2JzWMNQ_JZMVn3A_Q&s",
+            "Sex" : "Male/Female",
+            "Age": "11 years",
+            "Weight": "10 to 15 pounds",
+            "Height": "10 to 15 inches",
+            "Detail": "Miniature Poodles have a well-proportioned, elegant, and athletic build. They are known for their graceful appearance and balanced proportions."
+          },
+          {
+            "id": "09",
+            "name": "Toy",
+            "Price": "$300",
+            "img": "https://www.purina.in/sites/default/files/styles/ttt_image_510/public/2021-02/BREED%20Hero%20Mobile_0050_poodle_toy.jpg?itok=Z-6Ny2jC",
+            "Sex" : "Male/Female",
+            "Age": "10 years",
+            "Weight": "4 to 6 pounds",
+            "Height": "10 inches",
+            "Detail": "Toy Poodles are highly intelligent and one of the most trainable breeds. They excel in obedience training and are quick learners."
+          }
+        ]
+      },{
+        "name": "Rottweiler Group",
+        "subcategory": [
+          {
+            "id": "10",
+            "name": "German",
+            "Price": "$600",
+            "img": "https://cdn.britannica.com/69/234469-050-B883797B/Rottweiler-dog.jpg",
+            "Sex" : "Male/Female",
+            "Age": "8 years",
+            "Weight": "95 to 135 pounds",
+            "Height": "24 to 27 inches",
+            "Detail": "German Rottweilers are known for their loyalty and protective nature. They are natural guardians and can be very protective of their family."
+          },
+          {
+            "id": "11",
+            "name": "American",
+            "Price": "$500",
+            "img": "https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/8b58fdb6-15ce-4e99-aa69-5ab2ebaf9bec/f0c731c6-ad4c-4c88-8bea-4338667145f3.png",
+            "Sex" : "Male/Female",
+            "Age": "12 years",
+            "Weight": "85 to 135 pounds",
+            "Height": "22 to 27 inches",
+            "Detail": "American Rottweilers are known for their confidence, loyalty, and intelligence. They are often described as calm, confident, and courageous."
+          }
+        ]
+      },{
+        "name": "Bulldog Group",
+        "subcategory": [
+          {
+            "id": "12",
+            "name": "English",
+            "Price": "$400",
+            "img": "https://www.bil-jac.com/media/pw2beqqj/english-bulldog-146927148.jpg",
+            "Sex" : "Male/Female",
+            "Age": "8 years",
+            "Weight": "50 to 55 pounds",
+            "Height": "14 to 16 inches",
+            "Detail": "English Bulldogs have low to moderate exercise needs due to their brachycephalic (short-nosed) anatomy. Short walks and play sessions are usually sufficient to meet their exercise requirements."
+          },
+          {
+            "id": "13",
+            "name": "French",
+            "Price": "$500",
+            "img": "https://cdn.britannica.com/44/233844-050-A0F9F39C/French-bulldog.jpg",
+            "Sex" : "Male/Female",
+            "Age": "11 years",
+            "Weight": "20 to 28 pounds",
+            "Height": "11 to 12 inches",
+            "Detail": "French Bulldogs are charming, affectionate companions with a distinctive appearance and playful personality."
+          },
+          {
+            "id": "14",
+            "name": "American",
+            "Price": "$700",
+            "img": "https://www.akc.org/wp-content/uploads/2020/01/American-Bulldog-standing-in-three-quarter-view.jpg",
+            "Sex" : "Male/Female",
+            "Age": "10 years",
+            "Weight": "75 to 125 pounds",
+            "Height": "22 to 27 inches",
+            "Detail": "American Bulldogs are strong, athletic dogs with a loyal and protective nature.It can live fulfilling lives as beloved companions and active members of the family."
+          },
+          {
+            "id": "15",
+            "name": "Olde English",
+            "Price": "$500",
+            "img": "https://ioeba.net/wp-content/uploads/2019/07/chapo_per_given_2.jpg",
+            "Sex" : "Male/Female",
+            "Age": "9 years",
+            "Weight": "65 to 130 pounds",
+            "Height": "17 to 20 inches",
+            "Detail": "Olde English Bulldogs have a muscular and sturdy build, with a broad chest and strong, well-developed limbs. They have a distinctive, wrinkled face with a pushed-in nose and expressive eyes."
+          },
+          {
+            "id": "16",
+            "name": "Doguede Bordeaux",
+            "Price": "$600",
+            "img": "https://dogtime.com/wp-content/uploads/sites/12/2011/01/GettyImages-870835468-e1688165931787.jpg?w=1024",
+            "Sex" : "Male/Female",
+            "Age": "10 years",
+            "Weight": "110 to 145 pounds",
+            "Height": "23 to 27 inches",
+            "Detail": "Dogue de Bordeaux Bulldogs have a powerful and muscular build, with a broad chest and sturdy limbs. They have a distinctive wrinkled face with a pronounced muzzle and prominent dewlap. Their expression is alert and confident."
+          }
+        ]
+      },{
+        "name": "Pomeranian Group",
+        "subcategory": [
+          {
+            "id": "17",
+            "name": "Miniature",
+            "Price": "$800",
+            "img": "https://a.storyblok.com/f/152976/6296x3940/a6bc865888/pomeranian.jpg",
+            "Sex" : "Male/Female",
+            "Age": "11 years",
+            "Weight": "3 to 7 pounds",
+            "Height": "6 to 7 inches",
+            "Detail": "Miniature Pomeranians have a compact and sturdy build, with a fox-like appearance. Despite their small size, they should have a well-proportioned body with a plumed tail carried high over the back."
+          },
+          {
+            "id": "18",
+            "name": "Standard",
+            "Price": "$900",
+            "img": "https://www.akc.org/wp-content/uploads/2017/11/Pomeranian-On-White-01.jpg",
+            "Sex" : "Male/Female",
+            "Age": "12 years",
+            "Weight": "3 to 7 pounds",
+            "Height": "8 to 11 inches ",
+            "Detail": "Standard Pomeranians are delightful companion dogs known for their small size, fluffy coats, and lively personalities."
+          },
+          {
+            "id": "19",
+            "name": "Throwback",
+            "Price": "$700",
+            "img": "https://pomscare.com/wp-content/uploads/2022/08/image.png",
+            "Sex" : "Male/Female",
+            "Age": "11 years",
+            "Weight": "10 to 20 pounds",
+            "Height": "10 to 14 inches",
+            "Detail": "Throwback Pomeranians are charming and affectionate dogs with a larger size and a coat that harks back to the breed's historical roots."
+          }
+        ]
+      },{
+        "id": "20",
+        "name": "Doberman Pinscher",
+        "Price": "$800",
+        "img": "https://media-be.chewy.com/wp-content/uploads/2021/06/02102805/Doberman-Pinscher_Featured-Image.jpg",
+        "Sex" : "Male/Female",
+        "Age": "10 years",
+        "Weight": "75 to 100 pounds",
+        "Height": "26 to 28 inches",
+        "Detail": "Doberman Pinschers are active dogs that require regular exercise to maintain their physical and mental well-being. Daily walks, play sessions, and opportunities to run in a secure area are essential."
+      },{
+        "id": "21",
+        "name": "Golden Retriever",
+        "Price": "$900",
+        "img": "https://cdn.wamiz.fr/cdn-cgi/image/format=auto,quality=80,width=532,height=532,fit=cover/animal/breed/dog/adult/5caf0e553c374396407291.jpg",
+        "Sex" : "Male/Female",
+        "Age": "9 years",
+        "Weight": "65 to 75 pounds",
+        "Height": "22 to 24 inches",
+        "Detail": "Golden Retriever are intelligent and eager to please, making them highly trainable. Early socialization and obedience training are important to channel their energy and prevent behavioral issues."
+      },{
+        "id": "22",
+        "name": "Beagle",
+        "Price": "$600",
+        "img": "https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg",
+        "Sex" : "Male/Female",
+        "Age": "12 years",
+        "Weight": "22 to 25 pounds",
+        "Height": "14 to 16 inches",
+        "Detail": "Golden Retriever are intelligent and eager to please, making them highly trainable. Early socialization and obedience training are important to channel their energy and prevent behavioral issues."
+      },{
+        "id": "23",
+        "name": "Boxer",
+        "Price": "$800",
+        "img": "https://cdn.britannica.com/46/233846-050-8D30A43B/Boxer-dog.jpg",
+        "Sex" : "Male/Female",
+        "Age": "10 years",
+        "Weight": "65 to 80 pounds",
+        "Height": "22 to 25 inches",
+        "Detail": "Boxers are medium-sized, muscular dogs with a strong and athletic build. They have a square-shaped head, a short muzzle, and a powerful jaw. Their body is well-proportioned, with a deep chest and a straight, firm back."
+      }
+    ]
+  },
+  {
+    "Cat": [
+      {
+        "name": "Short-haired Group",
+        "subcategory": [
+          {
+            "id": "24",
+            "name": "American Shorthair",
+            "Price": "$400",
+            "img": "https://www.petfinder.com/sites/default/files/images/content/american-shorthair-detail-scaled.jpg",
+            "Sex": "Male/Female",
+            "Age": "15 years",
+            "Weight": "11 to 15 pounds",
+            "Height": "9 to 10 inches",
+            "Detail": "American Shorthairs have a muscular and well-proportioned body. They are neither too slender nor too heavy, with a balanced appearance."
+          },
+          {
+            "id": "25",
+            "name": "European Shorthair",
+            "Price": "$300",
+            "img": "https://www.dailypaws.com/thmb/BhEL8wBZWz899x551PrqDxBVDeM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/european-shorthair-grey-and-white-495804670-2000-29e9aeca25104fb485b4bfae639f6a3c.jpg",
+            "Sex" : "Male/Female",
+            "Age": "12 years",
+            "Weight": "8 to 14 pounds",
+            "Height": "9 to 10 inches",
+            "Detail": "European Shorthairs come in a variety of colors and patterns, ranging from solid colors to tabby, tortoiseshell, and bicolor variations. They have a medium-sized body with a muscular build, expressive eyes, and a short, dense coat that requires minimal grooming."
+          }
+        ]
+      },
+      {
+        "name": "Long-haired Group",
+        "subcategory": [
+          {
+            "id": "26",
+            "name": "Birman",
+            "Price": "$500",
+            "img": "https://www.pumpkin.care/wp-content/uploads/2022/01/birman-hero.jpg",
+            "Sex": "Male/Female",
+            "Age": "13 years",
+            "Weight": "6 to 12 pounds",
+            "Height": "8 to 10 inches",
+            "Detail": "Birman cats require regular grooming to maintain their luxurious coat. Weekly brushing helps prevent matting and minimizes shedding. Additionally, occasional baths can help keep their fur clean and healthy."
+          },
+          {
+            "id": "27",
+            "name": "Himalayan",
+            "Price": "$600",
+            "img": "https://basepaws.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F7hqiona4456t%2FWgrmcGdhnZdzFSK6ZbuVH%2F888886015292bef82e71f438365981bc%2FHimalayan_Cat.jpg&w=1080&q=75",
+            "Sex" : "Male/Female",
+            "Age": "10 years",
+            "Weight": "7 to 12 pounds",
+            "Height": "9 to 10 inches",
+            "Detail": "Himalayan cats have a medium to large, well-balanced body with a muscular build. They have a broad chest and sturdy legs, giving them a strong and robust appearance."
+          }
+        ]
+      },
+      {
+        "name": "Semi-long-haired Group",
+        "subcategory": [
+          {
+            "id": "28",
+            "name": "Siberian",
+            "Price": "$300",
+            "img": "https://www.thesprucepets.com/thmb/XYbPm6oUgDzU7fYX1v8Ml5K2Y0s=/1595x0/filters:no_upscale():strip_icc()/GettyImages-1198704735-69e2d11cba434cb28a3c9e6caae9d128.jpg",
+            "Sex": "Male/Female",
+            "Age": "11 years",
+            "Weight": "8 to 17 pounds",
+            "Height": "9 to 11 inches",
+            "Detail": "Siberian cats have a muscular and well-proportioned build, with a semi-longhaired coat that provides protection from the cold. They have a rounded, slightly cobby body, with strong legs and a bushy tail."
+          },
+          {
+            "id": "29",
+            "name": "Turkish Angora",
+            "Price": "$400",
+            "img": "https://www.thesprucepets.com/thmb/6H5zpnf6V5AHAM4AZFi06lhoSr0=/2121x0/filters:no_upscale():strip_icc()/GettyImages-1140917170-727bc42801da47c4ace4eb34940d2120.jpg",
+            "Sex" : "Male/Female",
+            "Age": "10 years",
+            "Weight": "7 to 12 pounds",
+            "Height": "9 to 11 inches",
+            "Detail": "Turkish Angora cats have a slender and graceful build with long, fine-boned legs. They are athletic and agile, capable of leaping to impressive heights."
+          }
+        ]
+      },
+      {
+        "name": "Hairless Group",
+        "subcategory": [
+          {
+            "id": "30",
+            "name": "Sphynx",
+            "Price": "$800",
+            "img": "https://www.purina.in/sites/default/files/2021-02/CAT%20HERO_0026_Sphynx.jpg",
+            "Sex": "Male/Female",
+            "Age": "12 years",
+            "Weight": "6 to 12 pounds",
+            "Height": "8 to 10 inches",
+            "Detail": "Sphynx cats have a medium-sized, muscular body with a distinctive lack of fur. Despite their appearance, they are not actually hairless; they have a fine layer of downy hair covering their bodies, giving them a soft texture."
+          },
+          {
+            "id": "31",
+            "name": "Donskoy",
+            "Price": "$900",
+            "img": "https://thepedigreepaws.b-cdn.net/web/cat-breed/28/1633539368-Donskoy_cat_breed.jpg",
+            "Sex" : "Male/Female",
+            "Age": "11 years",
+            "Weight": "6 to 12 pounds",
+            "Height": "8 to 10 inches",
+            "Detail": "Donskoy cats have a muscular and sturdy body, with a rounded chest and a medium-length tail. Their ears are large and set wide apart, giving them an alert and expressive appearance."
+          }
+        ]
+      },
+      {
+        "name": "Hybrid Group",
+        "subcategory": [
+          {
+            "id": "32",
+            "name": "Bengal",
+            "Price": "$600",
+            "img": "https://www.catster.com/wp-content/uploads/2023/12/bengal-cat-sitting-on-the-floor_Eric-Isselee_Shutterstock.jpg",
+            "Sex": "Male/Female",
+            "Age": "10 years",
+            "Weight": "10 to 18 pounds",
+            "Height": "10 to 16 inches",
+            "Detail": "Bengal cats are intelligent and can be trained to perform tricks and even walk on a leash. Positive reinforcement methods work well, as they respond positively to praise and treats."
+          },
+          {
+            "id": "33",
+            "name": "Chausie",
+            "Price": "$700",
+            "img": "https://www.thesprucepets.com/thmb/_bmi7xs5DN51nX16fGt49hmPgvQ=/2121x0/filters:no_upscale():strip_icc()/GettyImages-837639058-2af27d14f8fa43aa9fc2c188596ffef1.jpg",
+            "Sex" : "Male/Female",
+            "Age": "12 years",
+            "Weight": "15 to 20 pounds",
+            "Height": "12 to 14 inches",
+            "Detail": "Chausie cats are active and energetic cats that require ample physical and mental stimulation to thrive.Chausie cats are striking felines with a wild appearance and playful personality."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Fish": [
+      {
+        "name": "Freshwater Group",
+        "subcategory": [
+          {
+            "id": "34",
+            "name": "Rohu",
+            "Price": "$400",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCF5DWl3CrSnYBEfZha64jSwqtyiskOqJ88rr1uOoQ5Q&s",
+            "Sex": "Male/Female",
+            "Age": "10 years",
+            "Weight": "99 pounds",
+            "Height": "2 meters",
+            "Detail": "Rohu have a laterally compressed body with a distinct, slightly concave head. They have a silvery body with a bluish tinge on the dorsal side and silvery-white on the ventral side."
+          },
+          {
+            "id": "35",
+            "name": "Catla",
+            "Price": "$300",
+            "img": "https://growtre.com/wp-content/uploads/2023/08/Katla-Fish-1-1024x538.webp",
+            "Sex" : "Male/Female",
+            "Age": "12 years",
+            "Weight": "11 to 33 pounds",
+            "Height": "24 to 47 inches",
+            "Detail": "Catla have a large, broad head and an upward-facing mouth, adapted for surface and mid-water feeding. Their body is laterally compressed with a silvery-white coloration on the belly and a darker shade on the back."
+          },
+          {
+            "id": "36",
+            "name": "Malli",
+            "Price": "$500",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUAzKW6j74Y2aJwO04QlQDprdFx2NZgUkZpY4LayL457XC_yBzkSIKGM_STCQCbQFz0Nc&usqp=CAU",
+            "Sex" : "Male/Female",
+            "Age": "12 years",
+            "Weight": "0.5 to 4 pounds",
+            "Height": "10 to 14 inches",
+            "Detail": "Proper care, including suitable tank conditions, diet, and regular maintenance, is essential for the well-being and longevity of freshwater fish."
+          },
+          {
+            "id": "37",
+            "name": "Singhara",
+            "Price": "$200",
+            "img": "https://www.rawhalalchicken.com/image/cache/catalog/Aar%20new-500x500-500x500.jpg",
+            "Sex" : "Male/Female",
+            "Age": "5 years",
+            "Weight": "0.4 to 1.1 pounds",
+            "Height": "1.2 to 2 inches",
+            "Detail": "Singhara have a long, slender, and slightly compressed body. The skin is smooth, with a layer of mucus that helps protect against infections and parasites."
+          },
+          {
+            "id": "38",
+            "name": "Calbasu",
+            "Price": "$300",
+            "img": "https://www.apnikheti.com/upload/liveStock/1893idea99calbasu.gif",
+            "Sex" : "Male/Female",
+            "Age": "10 years",
+            "Weight": "4 to 10 pounds",
+            "Height": "12 to 24 inches",
+            "Detail": "Calbasu have an elongated, laterally compressed body. They possess a prominent dorsal fin and a slightly arched back."
+          }
+        ]
+      },
+      {
+        "name": "Saltwater Group",
+        "subcategory": [
+          {
+            "id": "39",
+            "name": "Indian Salmon",
+            "Price": "$500",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7KctGd7_3NZ2XGHsYoyMHERUccP8Qt_aLST4fqZh7tQ&s",
+            "Sex": "Male/Female",
+            "Age": "4 years",
+            "Weight": "18 to 33 pounds",
+            "Height": "1 to 1.5 meters",
+            "Detail": "The Indian Salmon has a streamlined, elongated body that is well-suited for fast swimming. It has a prominent forked tail and a silvery body with a slight bluish or greenish tint on the back."
+          },
+          {
+            "id": "40",
+            "name": "Clownfish",
+            "Price": "$600",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Amphiprion_ocellaris_%28Clown_anemonefish%29_by_Nick_Hobgood.jpg",
+            "Sex" : "Male/Female",
+            "Age": "6 years",
+            "Weight": "0.1 to 0.2 pounds",
+            "Height": "2 to 4.5 inches ",
+            "Detail": "Clownfish are popular saltwater aquarium fish, known for their bright colors and symbiotic relationship with sea anemones."
+          },
+          {
+            "id": "41",
+            "name": "Surmai",
+            "Price": "$400",
+            "img": "https://5.imimg.com/data5/FE/DP/MY-3682375/surmai-fish-500x500.jpg",
+            "Sex" : "Male/Female",
+            "Age": "10 years",
+            "Weight": "4 to 33 pounds",
+            "Height": "16 to 39 inches",
+            "Detail": "The Surmai fish, also known as the Indo-Pacific king mackerel (Scomberomorus guttatus), is a popular species found in the Indian and Western Pacific Oceans."
+          },
+          {
+            "id": "42",
+            "name": "Nethili",
+            "Price": "$500",
+            "img": "https://2.wlimg.com/product_images/bc-full/2023/9/11340133/nethili-fish-1693015845-7050482.jpeg",
+            "Sex" : "Male/Female",
+            "Age": "10 years",
+            "Weight": "5 to 20 grams",
+            "Height": "4 to 6 inches",
+            "Detail": "Nethili generally refers to small anchovy species found in the Indian Ocean and surrounding waters, particularly in South Asia."
+          }
+        ]
+      },
+      {
+        "name": "Coldwater Group",
+        "subcategory": [
+          {
+            "id": "43",
+            "name": "Salmon",
+            "Price": "$600",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1uTmXYWyXAZQKHcgBW6PUlB_bDAmA6u-yGI21OEJq5Q&s",
+            "Sex": "Male/Female",
+            "Age": "3 years",
+            "Weight": "10 to 50 pounds",
+            "Height": "24 to 36 inches",
+            "Detail": "Salmon generally have streamlined, torpedo-shaped bodies, which help them navigate through the water with speed and agility."
+          },
+          {
+            "id": "44",
+            "name": "Trout",
+            "Price": "$400",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCzrIq-jMt1FZvTYyOilEulCXMQQXNjdnHjvBcmG0-7w&s",
+            "Sex" : "Male/Female",
+            "Age": "5 years",
+            "Weight": "1 to 5 pounds",
+            "Height": "12 to 20 inches",
+            "Detail": "Trout have streamlined bodies adapted for swimming in fast-flowing streams and rivers. They typically have a torpedo-like shape with a pointed snout and a forked tail."
+          },
+          {
+            "id": "45",
+            "name": "Graylings",
+            "Price": "$200",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIxr7Fa7iFjkf5JjWpEXJ45rRlr6iuw6j3cQTdTu9WhUDJY0GTag3-g04WhAnZw8ifPK0&usqp=CAU",
+            "Sex" : "Male/Female",
+            "Age": "5 years",
+            "Weight": "1 to 2 pounds",
+            "Height": "12 to 20 inches",
+            "Detail": "Graylings, specifically the European grayling (Thymallus thymallus) and the Arctic grayling (Thymallus arcticus), are coldwater fish known for their beauty and sporting qualities."
+          }
+        ]
+      },
+      {
+        "name": "Cartilaginous Group",
+        "subcategory": [
+          {
+            "id": "46",
+            "name": "Rays",
+            "Price": "$400",
+            "img": "https://cdn.britannica.com/27/121827-050-0E97F166/Fish-forms-bodies-rays-disks.jpg",
+            "Sex": "Male/Female",
+            "Age": "6 years",
+            "Weight": "2 to 10 pounds",
+            "Height": "10 to 12 inches",
+            "Detail": "Rays have a distinct flattened body with large, wing-like pectoral fins that are fused to the head."
+          },
+          {
+            "id": "47",
+            "name": "Skates",
+            "Price": "$500",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Amblyraja_hyperborea1.jpg/1200px-Amblyraja_hyperborea1.jpg",
+            "Sex" : "Male/Female",
+            "Age": "12 years",
+            "Weight": "2 to 5 pounds",
+            "Height": "1 to 3 inches",
+            "Detail": "Skates have a broad, flattened body with large pectoral fins that extend from or near their head to the tail, giving them a diamond or disc-like shape."
+          },
+          {
+            "id": "48",
+            "name": "Chimeras",
+            "Price": "$700",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Hydrolagus_colliei.jpg/640px-Hydrolagus_colliei.jpg",
+            "Sex" : "Male/Female",
+            "Age": "15 years",
+            "Weight": "2 to 20 pounds",
+            "Height": "2 to 5 feet",
+            "Detail": "Chimeras have elongated bodies with a tapering tail. They have large heads with prominent eyes adapted for low-light environments."
+          },
+          {
+            "id": "49",
+            "name": "Elephant Fish",
+            "Price": "$900",
+            "img": "https://tnaqua.org/app/uploads/2020/05/ElephantnoseFish_1200-2-e1594413784347-1200x0-c-default.jpg",
+            "Sex" : "Male/Female",
+            "Age": "12 years",
+            "Weight": "5 to 10 pounds",
+            "Height": "4 feet",
+            "Detail": "The elephant fish has a distinctive elongated snout that resembles an elephant’s trunk, which it uses to detect prey on the ocean floor."
+          }
+        ]
+      },
+      {
+        "name": "Bony Group",
+        "subcategory": [
+          {
+            "id": "50",
+            "name": "Sunfish",
+            "Price": "$600",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVynyeFThp-e9NKEC-l5qWGhPdJmVXvqE1ODZvCNv4Dw&s",
+            "Sex": "Male/Female",
+            "Age": "8 years",
+            "Weight": "2,200 pounds",
+            "Height": "14 feet",
+            "Detail": "Sunfish have a distinctive flattened, oval body shape. They lack a true tail fin; instead, they have a clavus, which is a rudder-like structure formed by the convergence of the dorsal and anal fins."
+          },
+          {
+            "id": "51",
+            "name": "Bass",
+            "Price": "$300",
+            "img": "https://cdn.britannica.com/02/88102-050-5513C59A/yellow-bass.jpg",
+            "Sex" : "Male/Female",
+            "Age": "10 years",
+            "Weight": "1 to 5 pounds",
+            "Height": "12 to 15 inches",
+            "Detail": "Bass is a term used to describe several species of bony fish, many of which are popular in sport fishing and aquaculture."
+          },
+          {
+            "id": "52",
+            "name": "Catfish",
+            "Price": "$900",
+            "img": "https://cdn.britannica.com/22/141422-050-75094F72/Red-tail-catfish.jpg",
+            "Sex" : "Male/Female",
+            "Age": "11 years",
+            "Weight": "20 to 40 pounds",
+            "Height": "1 to 4 inches",
+            "Detail": "Catfish generally have a cylindrical body shape, tapering towards the tail. They are typically muscular and well-adapted to bottom-dwelling."
+          },
+          {
+            "id": "53",
+            "name": "Trout",
+            "Price": "$800",
+            "img": "https://content.osgnetworks.tv/flyfisherman/content/photos/AboutRainbowTrout-HERO-1200x800.jpg",
+            "Sex" : "Male/Female",
+            "Age": "3 years",
+            "Weight": "1 to 10 pounds",
+            "Height": "4 to 6 inches",
+            "Detail": "Trout have streamlined, elongated bodies that are well-adapted for fast swimming. They have a characteristic adipose fin located between the dorsal fin and the tail."
+          },
+          {
+            "id": "54",
+            "name": "Pike",
+            "Price": "$700",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHD8gxoGrhKGF2LZMofUSBzdMOfx8SK2VQdFE6G0KQMA&s",
+            "Sex" : "Male/Female",
+            "Age": "7 years",
+            "Weight": "2 to 10 pounds",
+            "Height": "16 to 22 inches",
+            "Detail": "Pike have an elongated, torpedo-shaped body, which aids in their ability to swim quickly and ambush prey."
+          }
+        ]
+      },
+      {
+        "name": "Jawless Group",
+        "subcategory": [
+          {
+            "id": "55",
+            "name": "Hagfish",
+            "Price": "$600",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE-lJxHUgJ6UnDDeXjOOKOAGlyebw5DmJBUbEfzZC8sg&s",
+            "Sex": "Male/Female",
+            "Age": "20 years",
+            "Weight": "8 to 20 ounces",
+            "Height": "12 to 18 inches",
+            "Detail": "Hagfish have elongated, eel-like bodies with smooth, scaleless skin. They lack paired fins and have a cartilaginous skeleton. Their bodies are cylindrical and typically taper towards the tail."
+          },
+          {
+            "id": "56",
+            "name": "Lampreys",
+            "Price": "$700",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBJLC3rbk-TWUAaqmcU9BMoHJFYvIonhIvcE8lSf4iKw&s",
+            "Sex" : "Male/Female",
+            "Age": "3 years",
+            "Weight": "15 to 20 grams",
+            "Height": "4.7 to 39 inches",
+            "Detail": "Lampreys have a cylindrical, eel-like body with smooth, scaleless skin. They lack paired fins and possess a single dorsal fin located near the posterior end of the body."
+          }
+        ]
+      },
+      {
+        "name": "Pelagic Group",
+        "subcategory": [
+          {
+            "id": "57",
+            "name": "Sharks",
+            "Price": "$800",
+            "img": "https://cdn.britannica.com/79/65379-050-5CF52BAC/Shortfin-mako-shark-seas.jpg",
+            "Sex": "Male/Female",
+            "Age": "4 years",
+            "Weight": "5,000 pounds",
+            "Height": "6 to 8 feet",
+            "Detail": "Pelagic sharks are carnivorous predators that primarily feed on fish, squid, and other marine creatures. Their diet can vary depending on their species, size, and habitat."
+          },
+          {
+            "id": "58",
+            "name": "Tuna",
+            "Price": "$900",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBHjhJdPJ0yToUY2ycy2xdjS740NcXCKfVlVYricuHrg&s",
+            "Sex" : "Male/Female",
+            "Age": "12 years",
+            "Weight": "1000 pounds",
+            "Height": "10 feet",
+            "Detail": "Tuna are a group of large and fast-swimming pelagic fish found in oceans around the world. They are highly prized for their meat, making them a significant commercial and recreational fishing target."
+          }
+        ]
+      },
+      {
+        "name": "Brackish Group",
+        "subcategory": [
+          {
+            "id": "59",
+            "name": "Banded puffer",
+            "Price": "$600",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Arothron_manilensis.jpg/1200px-Arothron_manilensis.jpg",
+            "Sex": "Male/Female",
+            "Age": "7 years",
+            "Weight": "10 to 18 pounds",
+            "Height": "4 to 6 inches",
+            "Detail": "Banded Puffer fish have a distinctive appearance characterized by bands of coloration across their bodies, typically alternating between dark and light shades."
+          },
+          {
+            "id": "60",
+            "name": "Dragon goby",
+            "Price": "$800",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsszs3qToSfxVRzX-pbsrzlcWZApUh3lZFLP1KWYTiIg&s",
+            "Sex" : "Male/Female",
+            "Age": "4 years",
+            "Weight": "11 to 20 pounds",
+            "Height": "8 to 12 inches",
+            "Detail": "Dragon Gobies are fascinating fish with unique behaviors and requirements."
+          },
+          {
+            "id": "61",
+            "name": "Toxotidae",
+            "Price": "$900",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD6B59wb1me8S3tXL7pbwSu7dhAXZ6JPODqa0qzvYkFg&s",
+            "Sex" : "Male/Female",
+            "Age": "5 years",
+            "Weight": "2 to 5 ounces",
+            "Height": "5 to 12 inches",
+            "Detail": "Toxotidae are fascinating and unique fish known for their hunting behavior and specialized anatomy."
+          },
+          {
+            "id": "62",
+            "name": "Green spotted Puffer",
+            "Price": "$700",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkW_7SGuV8LJYeZXqA9smTUtparcrEoG5KrlxmQS1a7A&s",
+            "Sex" : "Male/Female",
+            "Age": "6 years",
+            "Weight": "10 to 20 pounds",
+            "Height": "4 to 6 inches",
+            "Detail": "Green Spotted Puffers have a greenish-brown body with distinctive green spots scattered across their skin. The intensity of the green coloration can vary depending on factors such as mood and environment."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Chick": [
+      {
+        "name": "Clutch Group",
+        "subcategory": [
+          {
+            "id": "63",
+            "name": "Hatchlings",
+            "Price": "$400",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWSXiUZyBXL671NmwD_c2_RGUxqwxMpO0CwYTgX9HXKw&s",
+            "Sex": "Male/Female",
+            "Age": "4 years",
+            "Weight": "1 to 2 ounces",
+            "Height": "small",
+            "Detail": "Hatchling Clutch Chickens are prized for their dual-purpose capabilities, providing both meat and eggs for their owners."
+          },
+          {
+            "id": "64",
+            "name": "Fledglings",
+            "Price": "$500",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSMh38avmffc6bPiyOy6KUfgO4OrRE00B1cdXggaUOsg&s",
+            "Sex" : "Male/Female",
+            "Age": "5 years",
+            "Weight": "few grams",
+            "Height": "few tall",
+            "Detail": "Fledglings, whether of the clutch variety or otherwise, typically refer to baby birds that have recently hatched and are in the early stages of development."
+          },
+          {
+            "id": "65",
+            "name": "Juveniles",
+            "Price": "$200",
+            "img": "https://starmilling.com/wp-content/uploads/2020/07/juvenile_chicken.jpg",
+            "Sex" : "Male/Female",
+            "Age": "2 years",
+            "Weight": "28 grams to 454 grams",
+            "Height": "4 to 8 inches",
+            "Detail": "Juvenile clutch chicks begin to develop their adult feathers, which replace their downy chick feathers. The timing of feather development varies depending on the species and breed."
+          },
+          {
+            "id": "66",
+            "name": "Adults",
+            "Price": "$700",
+            "img": "https://hencam.com/static/uploads/2013/05/Buffy2.jpg",
+            "Sex" : "Male/Female",
+            "Age": "6 years",
+            "Weight": "6 to 8 pounds",
+            "Height": "18 to 24 inches",
+            "Detail": "Active Clutch chickens have a medium-sized body with a sturdy build. They have a well-proportioned frame with a moderately deep chest and broad shoulders."
+          }
+        ]
+      },
+      {
+        "name": "Brood Group",
+        "subcategory": [
+          {
+            "id": "67",
+            "name": "Young chicks",
+            "Price": "$800",
+            "img": "https://www.almanac.com/sites/default/files/users/AlmanacStaffArchive/hatching-raising-chicken-chicks_full_width.jpg",
+            "Sex": "Male/Female",
+            "Age": "4 years",
+            "Weight": "1 to 2 ounces",
+            "Height": "2 to 3 inches",
+            "Detail": "Young chicks require a warm and secure environment for proper growth and development. Brooders equipped with heat lamps or heating pads are commonly used to maintain optimal temperatures during the early stages of life."
+          },
+          {
+            "id": "68",
+            "name": "Feeding chicks",
+            "Price": "$500",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvHKmUu3EoNRFTmQoYb_vxRrpjjS76cYJ7SxlJr113UQ&s",
+            "Sex" : "Male/Female",
+            "Age": "6 to 20 weeks",
+            "Weight": "0.1 to 0.2 pounds",
+            "Height": "2 to 4.5 inches ",
+            "Detail": "The feed should also contain essential vitamins and minerals, including calcium for bone development and vitamin D for proper absorption."
+          },
+          {
+            "id": "69",
+            "name": "Fluffy chicks",
+            "Price": "$400",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk7eFjwnwqLOPkoV1F7gOU3X16VeZK38-soJjbX97yag&s",
+            "Sex" : "Male/Female",
+            "Age": "6 to 20 weeks",
+            "Weight": "few grams",
+            "Height": "few tall",
+            "Detail": "Fluffy chicks are adorable and endearing creatures that captivate the hearts of many. They start out tiny and delicate, but with proper care and nourishment, they grow into healthy, thriving chickens. "
+          },
+          {
+            "id": "70",
+            "name": "Downy chicks",
+            "Price": "$600",
+            "img": "https://cdn.britannica.com/21/160821-004-2FCCAEBA.jpg",
+            "Sex" : "Male/Female",
+            "Age": "few months",
+            "Weight": "0.5 to 1 ounce",
+            "Height": "few tall",
+            "Detail": "Downy chicks require a warm, draft-free environment for the first few weeks of life, typically provided by a brooder with a heat lamp or heat pad."
+          }
+        ]
+      },
+      {
+        "name": "Flock Group",
+        "subcategory": [
+          {
+            "id": "71",
+            "name": "Young chicks",
+            "Price": "$500",
+            "img": "https://www.almanac.com/sites/default/files/users/AlmanacStaffArchive/hatching-raising-chicken-chicks_full_width.jpg",
+            "Sex": "Male/Female",
+            "Age": "3 years",
+            "Weight": "1 to 1.5 ounces",
+            "Height": "2 to 3 inches",
+            "Detail": "Young chicks grow quickly, with significant changes in height and weight from hatching to 12 weeks."
+          },
+          {
+            "id": "72",
+            "name": "Chicklings",
+            "Price": "$700",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU5QSghZI2Prt27tOWyg_wCRaCZxFh-8uJMXBvO7ko3A&s",
+            "Sex" : "Male/Female",
+            "Age": "5 years",
+            "Weight": "5.5 to 8 pounds",
+            "Height": "15 to 26 inches",
+            "Detail": "Chickens have a wide variety of feather types and colors, depending on their breed. Some have smooth, shiny feathers, while others may have fluffy or even frizzled feathers."
+          }
+        ]
+      },
+      {
+        "name": "Peep Group",
+        "subcategory": [
+          {
+            "id": "73",
+            "name": "Peepers",
+            "Price": "$900",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU5QSghZI2Prt27tOWyg_wCRaCZxFh-8uJMXBvO7ko3A&s",
+            "Sex": "Male/Female",
+            "Age": "2 years",
+            "Weight": "3 to 5 gramscm",
+            "Height": "1 to 1.5 inches",
+            "Detail": "Peepers are commonly found in forests, wetlands, and areas with abundant moisture, such as near ponds and marshes. They are particularly active during the breeding season in early spring."
+          },
+          {
+            "id": "74",
+            "name": "Peep Cluster",
+            "Price": "$300",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk7eFjwnwqLOPkoV1F7gOU3X16VeZK38-soJjbX97yag&s",
+            "Sex" : "Male/Female",
+            "Age": "5 years",
+            "Weight": "1 to 2 ounces",
+            "Height": "2 to 3 inches",
+            "Detail": "Peep Cluster grow rapidly, reaching near-adult size within a few months."
+          },
+          {
+            "id": "75",
+            "name": "Peep Squad",
+            "Price": "$600",
+            "img": "https://www.almanac.com/sites/default/files/users/AlmanacStaffArchive/hatching-raising-chicken-chicks_full_width.jpg",
+            "Sex" : "Male/Female",
+            "Age": "6 months",
+            "Weight": "0.3 ounces",
+            "Height": "1.25 inches",
+            "Detail": "The Peep Squad Peep group refers to Marshmallow Peeps, which are marshmallow candies shaped like chicks, bunnies, and other animals, popular especially around Easter."
+          },
+          {
+            "id": "76",
+            "name": "Peep Brigade",
+            "Price": "$400",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbCAslZwxTI8cxLKBHDoYFQhcQwRwDisMEZ37mK9hxtg&s",
+            "Sex" : "Male/Female",
+            "Age": "few months",
+            "Weight": "few ounces",
+            "Height": "6 inches",
+            "Detail": "Peep Brigade from the Peep and the Big Wide World series, where characters like Peep the chick, Chirp the robin, and Quack the duck explore their world."
+          }
+        ]
+      },
+      {
+        "name": "Chick Cluster Group",
+        "subcategory": [
+          {
+            "id": "77",
+            "name": "Hatchlings",
+            "Price": "$600",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdPIgTSnjMPIqq_RUtpJcFqe2Y7Bs7YDW5CHEjq9vjQA&s",
+            "Sex": "Male/Female",
+            "Age": "few months",
+            "Weight": "1.2 to 1.6 ounces",
+            "Height": "2 to 3 inches",
+            "Detail": "Hatchlings to chick cluster groups, chickens go through rapid growth and significant physical changes.Covered in soft, fluffy down feathers. They are very small, delicate, and require a warm environment to thrive."
+          },
+          {
+            "id": "78",
+            "name": "Foraging Flock",
+            "Price": "$700",
+            "img": "https://img.freepik.com/premium-photo/flock-chickens-foraging-regenerative-pasture_536572-1755.jpg",
+            "Sex" : "Male/Female",
+            "Age": "few months",
+            "Weight": "0.5 to 1.5 ounces",
+            "Height": "4 to 6 inches",
+            "Detail": "Foraging Flock chicks, also known as Chick Cluster groups, are typically raised together in a communal setting where they learn important social behaviors and foraging skills."
+          },
+          {
+            "id": "79",
+            "name": "Feathered Flock",
+            "Price": "$900",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbCAslZwxTI8cxLKBHDoYFQhcQwRwDisMEZ37mK9hxtg&s",
+            "Sex" : "Male/Female",
+            "Age": "15 days",
+            "Weight": "0.5 to 1 ounce",
+            "Height": "4 to 6 inches",
+            "Detail": "Proper care, including warmth, nutrition, and socialization, is essential for their healthy development into mature chickens."
+          },
+          {
+            "id": "80",
+            "name": "Bantam Cluster",
+            "Price": "$500",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFi2uYSRhflD2Th41cDIQyaox93pwzGqiKRRLykpwq_g&s",
+            "Sex" : "Male/Female",
+            "Age": "20 days",
+            "Weight": "1 to 2 ounces",
+            "Height": "2.5 to 3 inches",
+            "Detail": "Bantam Cluster chicks are small and delicate upon hatching, but they quickly grow and develop under the right conditions."
+          },
+          {
+            "id": "81",
+            "name": "Heritage Breed Flock",
+            "Price": "$200",
+            "img": "https://cdn-gicjf.nitrocdn.com/XyXvXcpKZzEKVXXAznUMxcWPETmzUupR/assets/images/optimized/rev-1c5ef8f/www.thechickentractor.com.au/wp-content/uploads/2017/02/Wyandotte-Heritage-Chicken-Breeds-728x655.jpg",
+            "Sex" : "Male/Female",
+            "Age": "7 years",
+            "Weight": "2 to 10 pounds",
+            "Height": "16 to 22 inches",
+            "Detail": "Pike have an elongated, torpedo-shaped body, which aids in their ability to swim quickly and ambush prey."
+          }
+        ]
+      },
+      {
+        "name": "Nursery Group",
+        "subcategory": [
+          {
+            "id": "82",
+            "name": "Day-Old Chicks",
+            "Price": "$300",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT492BIVbSo-_pPBAZOqt_J91zIF2EDEWz7x1oOGpIljw&s",
+            "Sex": "Male/Female",
+            "Age": "1 days",
+            "Weight": "1 to 2 ounces",
+            "Height": "4 to 6 inches",
+            "Detail": "Day-old chicks grow at a rapid rate during their early weeks of life. With proper care and nutrition, they will quickly gain weight and develop into healthy juvenile birds."
+          },
+          {
+            "id": "83",
+            "name": "Week-Old Chicks",
+            "Price": "$500",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL6OiCaF2Qbl7Za1s1h78S8yeUdmhDDuHfcCR6oo6LxQ&s",
+            "Sex" : "Male/Female",
+            "Age": "3 years",
+            "Weight": "1.5 to 2 ounces",
+            "Height": "3 to 4 inches",
+            "Detail": "Week-old chicks entering the nursery stage are at a crucial point in their development."
+          },
+          {
+            "id": "84",
+            "name": "Grower Chicks",
+            "Price": "$800",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyB9Y_JvOx-e8Rcbv-wGnDVwAyU-rlRipJn7eTNGgSNQ&s",
+            "Sex" : "Male/Female",
+            "Age": "6 to 10 weeks",
+            "Weight": "1.5 to 2.5 pounds",
+            "Height": "6 to 8 inches",
+            "Detail": "Grower Chicks transitioning into the Nursery group are essential for promoting healthy growth and development in poultry farming operations."
+          },
+          {
+            "id": "85",
+            "name": "Pullet Chicks",
+            "Price": "$600",
+            "img": "https://cdn.shopify.com/s/files/1/0039/4647/9689/files/pullet-chickens-in-backyard1.jpg",
+            "Sex" : "Male/Female",
+            "Age": "2 to 6 weeks",
+            "Weight": "0.1 to 0.5 pounds",
+            "Height": "6 to 8 inches",
+            "Detail": "Pullet chicks in the nursery group are usually housed in a nursery facility or separate area within a larger poultry house. "
+          },
+          {
+            "id": "86",
+            "name": "Specialty Breed Chicks",
+            "Price": "$700",
+            "img": "https://cdn.shopify.com/s/files/1/1407/3744/articles/Rare_Chicken_Breeds.png?v=1668638419",
+            "Sex" : "Male/Female",
+            "Age": "0 to 8 weeks",
+            "Weight": "1 to 2 ounces",
+            "Height": "2.5 to 3 inches",
+            "Detail": "Specialty breed chicks tend to grow at different rates depending on the breed. Some may reach their full size within a few months, while others may take longer to mature."
+          }
+        ]
+      }
+    ]
+  }
+]
