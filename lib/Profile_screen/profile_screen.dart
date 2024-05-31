@@ -1,6 +1,5 @@
 import 'dart:developer';
 import 'dart:io';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -9,8 +8,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:pass_app_ultron_techonology/Auth_screen/loginscreen.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
 import 'package:pass_app_ultron_techonology/Modle/chat_user.dart';
-
-import '../main.dart';
+import 'package:pass_app_ultron_techonology/consts/colors.dart';
 import '../same_code/dialogs.dart';
 
 //profile screen -- to show signed in user info
@@ -38,13 +36,13 @@ class _ProfileScreenMainState extends State<ProfileScreenMain> {
       child: Scaffold(
           backgroundColor: const Color(0xFFFFF0EA),
         //app bar
-          appBar: AppBar(title: const Text('Profile Screen')),
+          appBar: AppBar(title: const Text('Profile Screen',style: TextStyle(color: punk),)),
 
           //floating button to log out
           floatingActionButton: Padding(
             padding: const EdgeInsets.only(bottom: 10),
             child: FloatingActionButton.extended(
-                backgroundColor: Colors.redAccent,
+                backgroundColor: punk,
                 onPressed: () async {
                   //for showing progress dialog
                   Dialogs.showProgressBar(context);

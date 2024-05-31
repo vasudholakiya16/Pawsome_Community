@@ -142,7 +142,7 @@ class _DogDogCategoryDetailState extends State<DogDogCategoryDetail> {
                                     .margin(const EdgeInsets.symmetric(
                                     horizontal: 4))
                                     .white
-                                    .outerShadowSm
+                                    .outerShadow2Xl
                                     .roundedSM
                                     .padding(const EdgeInsets.all(18))
                                     .make()

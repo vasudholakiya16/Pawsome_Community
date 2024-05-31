@@ -18,7 +18,7 @@ class AllProduct extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: 'All Products'.text.fontFamily(bold).color(Colors.white).make(),
+        title: 'All Products'.text.fontFamily(bold).color(const Color(0xFFCA7867)).make(),
       ),
       body: StreamBuilder(
         stream: FireStoreServices.allproducts(),
@@ -71,7 +71,7 @@ class AllProduct extends StatelessWidget {
                   )
                       .box
                       .margin(const EdgeInsets.symmetric(horizontal: 4))
-                      .white
+                      .white.outerShadow2Xl
                       .roundedSM
                       .padding(const EdgeInsets.all(18))
                       .make()
