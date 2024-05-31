@@ -44,7 +44,7 @@ class _ChickDogCategoryDetailState extends State<ChickDogCategoryDetail> {
   Widget build(BuildContext context) {
     return  Scaffold(
         appBar:
-        AppBar(title: widget.title!.text.fontFamily(bold).white.make()),
+        AppBar(title: widget.title!.text.fontFamily(bold).color(const Color(0xFFCA7867)).make()),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

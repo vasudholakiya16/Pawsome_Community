@@ -27,7 +27,7 @@ class FishCategoryScreen extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: GridView.builder(
               shrinkWrap: true,
-              itemCount: 3,
+              itemCount: 4,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: 20,

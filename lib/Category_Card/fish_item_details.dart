@@ -83,6 +83,7 @@ class FishItemDetails extends StatelessWidget {
                       autoPlay: false,
                       height: 270,
                       itemCount: data['p_images'].length,
+
                       aspectRatio: 16 / 9,
                       viewportFraction: 1.0,
                       itemBuilder: (context, index) {
@@ -184,7 +185,7 @@ class FishItemDetails extends StatelessWidget {
                           ),
                         ),
                         Positioned(
-                          left: 40.0,
+                          left: 35.0,
                           top: 105.0,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -281,7 +282,7 @@ class FishItemDetails extends StatelessWidget {
                           ),
                         ),
                         Positioned(
-                          left: 275.0,
+                          left: 270.0,
                           top: 105.0,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

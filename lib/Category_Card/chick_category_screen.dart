@@ -28,7 +28,7 @@ class ChickCategoryScreen extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: GridView.builder(
               shrinkWrap: true,
-              itemCount: 1,
+              itemCount: 2,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: 20,

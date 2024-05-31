@@ -1,6 +1,7 @@
 
 
 import '../consts/firebase_constent.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class FireStoreServices {
   static getUser(uid) {
@@ -58,22 +59,23 @@ class FireStoreServices {
     return firestore.collection(cartCollections).doc(docId).delete();
   }
 
-// Get all chat messages
-//   static getChatMessages(docId) {
-//     return firestore
-//         .collection(chatCollections)
-//         .doc(docId)
-//         .collection(messagesCollections)
-//         .orderBy('created_on', descending: false)
-//         .snapshots();
-//   }
 
-  static getAllOrders() {
-    return firestore
-        .collection(ordersCollections)
-        .where('order_by', isEqualTo: currentUser!.uid)
-        .snapshots();
+
+  Future<void> addProduct(String name, double price, String category, List<String> images) async {
+    CollectionReference products = FirebaseFirestore.instance.collection('products');
+
+    return products
+        .add({
+      'product_name': name,
+      'p_price': price,
+      'category': category,
+      'p_images': images,
+    })
+        .then((value) => print("Product Added"))
+        .catchError((error) => print("Failed to add product: $error"));
   }
+
+
 
   static getWishlist() {
     return firestore
@@ -82,12 +84,6 @@ class FireStoreServices {
         .snapshots();
   }
 
-  // static getAllMessages() {
-  //   return firestore
-  //       .collection(chatCollections)
-  //       .where('toId', isEqualTo: currentUser!.uid)
-  //       .snapshots();
-  // }
 
   static getCounts() async {
     var res = await Future.wait([

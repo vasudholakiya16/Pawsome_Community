@@ -182,7 +182,7 @@ class CatItemDetails extends StatelessWidget {
                           ),
                         ),
                         Positioned(
-                          left: 40.0,
+                          left: 35.0,
                           top: 105.0,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -231,7 +231,7 @@ class CatItemDetails extends StatelessWidget {
                           ),
                         ),
                         Positioned(
-                          left: 148.0,
+                          left: 145.0,
                           top: 105.0,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

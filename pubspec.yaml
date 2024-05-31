@@ -152,8 +152,10 @@ flutter:
     - assets/images/c5.webp
     - assets/images/f1.webp
     - assets/images/f2.webp
-    - assets/images/f3.jpg
-    - assets/images/chick1.webp
+    - assets/images/f3.webp
+    - assets/images/f4.webp
+    - assets/images/ch1.jpg
+    - assets/images/ch2.jpg
     - assets/images/camera.png
     - assets/images/add_image.png
     - assets/images/Subtract1.png

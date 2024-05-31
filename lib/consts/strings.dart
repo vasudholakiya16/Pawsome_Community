@@ -52,8 +52,10 @@ const shorthairedCats = "Short-haired Group",
 
 //categories section of fish
 const freshwaterfish = "Freshwater Group",
-    saltwaterFish = "Saltwater Fish",
-    tropicalFish = "Tropical Fish";
+    saltwaterFish = "Saltwater Group",
+    coldwaterGroup = "Coldwater Group",
+    cartilaginousGroup= "Cartilaginous Group";
 
 //categories section of chick
-const Broiler = "Broiler";
+const broodGroup = "Brood Group",
+    chickClusterGroup="Chick Cluster Group";

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pass_app_ultron_techonology/All%20Product/show_all_product.dart';
 import 'package:pass_app_ultron_techonology/Category_Card/cat_category_screen.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/MessageScreen.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
@@ -30,7 +31,7 @@ class Home extends StatelessWidget {
           HomeScreen(),
           const CatCategoryScreen(title: 'All Favourite',),
           // const LoginScreen(),
-          const DogCategoryScreen(title: 'All Product',),
+          const AllProduct(),
           // const DogCategoryScreen(title: 'All Product',),
           const MessageScreen(),
           ProfileScreenMain(user:APIs.me),
@@ -67,7 +68,7 @@ class Home extends StatelessWidget {
           const BottomNavigationBarItem(
             icon: SizedBox(
               child: Icon(
-                Icons.add_circle_outline_outlined,
+                Icons.explore,
                 size: 30.0,
               ),
             ),

@@ -28,10 +28,13 @@ const catCategoriesList = [
 const fishCategoriesList=[
   freshwaterfish,
   saltwaterFish,
-  tropicalFish
+  coldwaterGroup,
+  cartilaginousGroup,
+
 ];
 const chickCategoriesList=[
-  Broiler
+  broodGroup,
+  chickClusterGroup,
 ];
 
 const categoriesImages = [
@@ -56,8 +59,10 @@ const fishCategoriesImages = [
   f1,
   f2,
   f3,
+  f4,
 ];
 
 const chickCategoriesImages= [
-  chick1
+  ch1,
+  ch2
 ];

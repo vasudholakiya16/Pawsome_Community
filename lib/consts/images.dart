@@ -86,7 +86,9 @@ const c4="assets/images/c4.jpg";
 const c5="assets/images/c5.webp";
 const f1="assets/images/f1.webp";
 const f2="assets/images/f2.webp";
-const f3="assets/images/f3.jpg";
-const chick1="assets/images/chick1.webp";
+const f3="assets/images/f3.webp";
+const f4="assets/images/f4.webp";
+const ch1="assets/images/ch1.jpg";
+const ch2="assets/images/ch2.jpg";
 
 
