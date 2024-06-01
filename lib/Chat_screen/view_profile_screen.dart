@@ -4,10 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/my_data_utils.dart';
 import 'package:pass_app_ultron_techonology/Modle/chat_user.dart';
 
-
-import '../main.dart';
-
-
 //view profile screen -- to view profile of user
 class ViewProfileScreen extends StatefulWidget {
   final ChatUser user;
@@ -21,10 +17,17 @@ class ViewProfileScreen extends StatefulWidget {
 class _ViewProfileScreenState extends State<ViewProfileScreen> {
   @override
   Widget build(BuildContext context) {
+    final mq = MediaQuery
+        .of(context)
+        .size;
+
     return GestureDetector(
       // for hiding keyboard
-      onTap: FocusScope.of(context).unfocus,
+      onTap: FocusScope
+          .of(context)
+          .unfocus,
       child: Scaffold(
+          backgroundColor: const Color(0xFFFFF0EA),
         //app bar
           appBar: AppBar(title: Text(widget.user.name)),
 
@@ -65,7 +68,8 @@ class _ViewProfileScreenState extends State<ViewProfileScreen> {
                       height: mq.height * .2,
                       fit: BoxFit.cover,
                       imageUrl: widget.user.image,
-                      errorWidget: (context, url, error) => const CircleAvatar(
+                      errorWidget: (context, url, error) =>
+                      const CircleAvatar(
                           child: Icon(CupertinoIcons.person)),
                     ),
                   ),

@@ -1,13 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import '../consts/list.dart';
 import '../consts/styles.dart';
 import '../controller/product_controller.dart';
 import 'cat_category_details.dart';
-import 'dog_category_details.dart';
 
 class CatCategoryScreen extends StatelessWidget {
   final String title;

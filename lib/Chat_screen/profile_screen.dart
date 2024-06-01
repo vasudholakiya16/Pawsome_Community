@@ -1,6 +1,5 @@
 import 'dart:developer';
 import 'dart:io';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +9,7 @@ import 'package:pass_app_ultron_techonology/Auth_screen/loginscreen.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/dialoges.dart';
 import 'package:pass_app_ultron_techonology/Modle/chat_user.dart';
-import 'package:pass_app_ultron_techonology/main.dart';
+
 
 class ProfileScreen extends StatefulWidget {
   final ChatUser user;
@@ -118,7 +117,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           onPressed: _showBottomSheet,
                           shape: const CircleBorder(),
                           color: Colors.white,
-                          child: const Icon(Icons.edit, color: Colors.blue),
+                          child: const Icon(Icons.edit, color:Color(0xFFCA7867)),
                         ),
                       )
                     ],
@@ -143,7 +142,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ? null
                         : 'Required Field',
                     decoration: InputDecoration(
-                        prefixIcon: const Icon(Icons.person, color: Colors.blue),
+                        prefixIcon: const Icon(Icons.person, color: Color(0xFFCA7867)),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12)),
                         hintText: 'eg. Happy Singh',
@@ -162,7 +161,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         : 'Required Field',
                     decoration: InputDecoration(
                         prefixIcon: const Icon(Icons.info_outline,
-                            color: Colors.blue),
+                            color: Color(0xFFCA7867)),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12)),
                         hintText: 'eg. Feeling Happy',

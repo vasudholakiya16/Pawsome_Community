@@ -1,21 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pass_app_ultron_techonology/All%20Product/show_all_product.dart';
-import 'package:pass_app_ultron_techonology/Category_Card/cat_category_screen.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/MessageScreen.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
 import 'package:pass_app_ultron_techonology/Home_screen/home_screen.dart';
 import 'package:pass_app_ultron_techonology/Profile_screen/profile_screen.dart';
-import 'package:pass_app_ultron_techonology/Splesh_screen/Skip1.dart';
-import 'package:pass_app_ultron_techonology/Splesh_screen/Skip2.dart';
 import 'package:pass_app_ultron_techonology/Wishlist_screen/wishlist_screen.dart';
 import 'package:pass_app_ultron_techonology/consts/styles.dart';
 import 'package:pass_app_ultron_techonology/controller/home_controller.dart';
-
-
-import '../Category_Card/dog_category_screen.dart';
-import '../Category_Card/fish_category_screen.dart';
-
 
 
 class Home extends StatelessWidget {

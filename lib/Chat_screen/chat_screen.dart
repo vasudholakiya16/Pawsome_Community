@@ -1,19 +1,17 @@
 import 'dart:developer';
 import 'dart:io';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:intl/intl.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/view_profile_screen.dart';
 import 'package:pass_app_ultron_techonology/Modle/chat_user.dart';
 import 'package:pass_app_ultron_techonology/Modle/message.dart';
 import 'package:pass_app_ultron_techonology/consts/colors.dart';
-
 import 'my_data_utils.dart';
-
 
 class ChatScreen extends StatefulWidget {
   final ChatUser user;
@@ -275,6 +273,7 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 }
+
 class MessageCard extends StatelessWidget {
   final Message message;
 
@@ -287,14 +286,11 @@ class MessageCard extends StatelessWidget {
     // Determine if the message is sent by the current user or the other user
     final isMe = message.fromId == APIs.user.uid;
 
-    // Parse and format the timestamp
+    // Format the timestamp using intl package
     String formattedTime = '';
     try {
       final DateTime timestamp = DateTime.parse(message.sent);
-      formattedTime = MyDateUtil.getFormattedTime(
-        context: context,
-        timestamp: timestamp.millisecondsSinceEpoch, time: '',
-      );
+      formattedTime = DateFormat('hh:mm a').format(timestamp); // Adjust the format as needed
     } catch (e) {
       // Handle parsing errors
       debugPrint('Error parsing timestamp: $e');
@@ -339,5 +335,3 @@ class MessageCard extends StatelessWidget {
     );
   }
 }
-
-

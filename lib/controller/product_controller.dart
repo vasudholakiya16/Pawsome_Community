@@ -1,9 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import '../Modle/category_model.dart';
 import '../consts/firebase_constent.dart';
 

@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/view_profile_screen.dart';
 import 'package:pass_app_ultron_techonology/Modle/chat_user.dart';
-import '../../main.dart';
+
 
 class ProfileDialog extends StatelessWidget {
   const ProfileDialog({super.key, required this.user});
@@ -69,7 +69,7 @@ class ProfileDialog extends StatelessWidget {
                     padding: const EdgeInsets.all(0),
                     shape: const CircleBorder(),
                     child: const Icon(Icons.info_outline,
-                        color: Colors.blue, size: 30),
+                        color:Color(0xFFCA7867), size: 30),
                   ))
             ],
           )),

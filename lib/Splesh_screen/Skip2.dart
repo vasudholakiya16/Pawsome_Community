@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pass_app_ultron_techonology/Auth_screen/loginscreen.dart';
 import 'package:pass_app_ultron_techonology/Splesh_screen/Skip3.dart';
-
-
 import '../consts/colors.dart';
 
 

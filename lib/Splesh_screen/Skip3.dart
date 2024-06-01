@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pass_app_ultron_techonology/Auth_screen/loginscreen.dart';
-
-
 import '../consts/colors.dart';
 
 

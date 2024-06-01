@@ -1,12 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pass_app_ultron_techonology/consts/colors.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import '../Services/firestore_services.dart';
-import '../consts/colors.dart';
 import '../consts/styles.dart';
 import '../controller/product_controller.dart';
 import '../same_code/loadingIndicator.dart';

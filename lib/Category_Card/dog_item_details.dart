@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,8 +7,6 @@ import 'package:pass_app_ultron_techonology/Chat_screen/MessageScreen.dart';
 import 'package:pass_app_ultron_techonology/consts/colors.dart';
 import 'package:pass_app_ultron_techonology/same_code/outButton.dart';
 import 'package:velocity_x/velocity_x.dart';
-
-import '../consts/colors.dart';
 import '../consts/styles.dart';
 import '../controller/product_controller.dart';
 

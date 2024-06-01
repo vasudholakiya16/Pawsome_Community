@@ -4,8 +4,6 @@ import 'package:get/get.dart';
 import 'package:pass_app_ultron_techonology/Home_screen/home.dart';
 import 'package:pass_app_ultron_techonology/Splesh_screen/Skip1.dart';
 import 'package:pass_app_ultron_techonology/consts/firebase_constent.dart';
-
-
 import '../consts/colors.dart';
 
 class SplashScreen extends StatefulWidget {

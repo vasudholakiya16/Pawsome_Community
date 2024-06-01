@@ -1,15 +1,10 @@
 import 'dart:developer';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/profile_screen.dart';
 import 'package:pass_app_ultron_techonology/consts/colors.dart';
-
-
-
 import '../../Modle/chat_user.dart';
-
 import '../../same_code/dialogs.dart';
 import 'apis.dart';
 import 'chat_user_card.dart';
@@ -76,7 +71,8 @@ class _MessageScreenState extends State<MessageScreen> {
         child: Scaffold(
           // App bar
           appBar: AppBar(
-              backgroundColor: Color(0xFFFFECE7),
+            automaticallyImplyLeading: false,
+              backgroundColor: const Color(0xFFFFECE7),
             // leading: const Icon(CupertinoIcons.home),
             title: _isSearching
                 ? TextField(
@@ -98,7 +94,7 @@ class _MessageScreenState extends State<MessageScreen> {
                 }
               },
             )
-                : const Text('Chat'),
+                : const Text('Message',style: TextStyle(color:  Color(0xFFCA7867)), ),
             actions: [
               // Search user button
               IconButton(
@@ -109,7 +105,7 @@ class _MessageScreenState extends State<MessageScreen> {
                   },
                   icon: Icon(_isSearching
                       ? CupertinoIcons.clear_circled_solid
-                      : Icons.search)),
+                      : Icons.search,color: const Color(0xFFCA7867),)),
 
               // More features button
               IconButton(
@@ -119,7 +115,7 @@ class _MessageScreenState extends State<MessageScreen> {
                         MaterialPageRoute(
                             builder: (_) => ProfileScreen(user: APIs.me)));
                   },
-                  icon: const Icon(Icons.more_vert))
+                  icon: const Icon(Icons.more_vert,color:Color(0xFFCA7867) ,))
             ],
           ),
 

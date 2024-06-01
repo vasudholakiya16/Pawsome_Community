@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -131,7 +130,8 @@ class _MessageCardState extends State<MessageCard> {
             Text(
               MyDateUtil.getFormattedTime(
                 context: context,
-                timestamp: DateTime.parse(widget.message.sent).millisecondsSinceEpoch, time: '',
+                time: widget.message.sent,
+                timestamp: int.parse(widget.message.sent),
               ),
               style: const TextStyle(fontSize: 13, color: Colors.black54),
             ),

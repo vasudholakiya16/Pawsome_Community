@@ -272,6 +272,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
           ),
         ),
+            30.heightBox,
 
         ],
         ),

@@ -1,10 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/MessageScreen.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import '../consts/colors.dart';
 import '../consts/styles.dart';
 import '../controller/product_controller.dart';

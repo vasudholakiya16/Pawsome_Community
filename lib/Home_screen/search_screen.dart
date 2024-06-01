@@ -1,6 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pass_app_ultron_techonology/Category_Card/dog_item_details.dart';
@@ -33,7 +31,7 @@ class SearchScreen extends StatelessWidget {
           } else if (snapshot.data!.docs.isEmpty) {
             return Center(
               child:
-              const Text('No Order yet!').text.color(darkFontGrey).make(),
+              const Text('No Search Found!').text.color(darkFontGrey).make(),
             );
           } else {
             var data = snapshot.data!.docs;

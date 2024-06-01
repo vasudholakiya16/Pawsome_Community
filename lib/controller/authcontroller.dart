@@ -3,8 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pass_app_ultron_techonology/consts/firebase_constent.dart';
-
-
 import 'package:velocity_x/velocity_x.dart';
 
 class AuthController extends GetxController {

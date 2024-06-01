@@ -10,7 +10,6 @@ import '../consts/styles.dart';
 import '../controller/product_controller.dart';
 import '../same_code/loadingIndicator.dart';
 import 'chick_item_details.dart';
-import 'dog_item_details.dart';
 
 class ChickDogCategoryDetail extends StatefulWidget {
   final String? title;

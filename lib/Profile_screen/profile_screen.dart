@@ -34,6 +34,7 @@ class _ProfileScreenMainState extends State<ProfileScreenMain> {
       // for hiding keyboard
       onTap: FocusScope.of(context).unfocus,
       child: Scaffold(
+          resizeToAvoidBottomInset: false,
           backgroundColor: const Color(0xFFFFF0EA),
         //app bar
           appBar: AppBar(title: const Text('Profile Screen',style: TextStyle(color: punk),)),
@@ -69,7 +70,7 @@ class _ProfileScreenMainState extends State<ProfileScreenMain> {
                   });
                 },
                 icon: const Icon(Icons.logout),
-                label: const Text('Logout')),
+                label: const Text('Logout',style: TextStyle(color: Colors.white))),
           ),
 
           //body
@@ -111,7 +112,7 @@ class _ProfileScreenMainState extends State<ProfileScreenMain> {
                             imageUrl: widget.user.image,
                             errorWidget: (context, url, error) =>
                             const CircleAvatar(
-                                child: Icon(CupertinoIcons.person)),
+                                child: Icon(CupertinoIcons.person, color: Color(0xFFCA7867))),
                           ),
                         ),
 
@@ -126,7 +127,7 @@ class _ProfileScreenMainState extends State<ProfileScreenMain> {
                             },
                             shape: const CircleBorder(),
                             color: Colors.white,
-                            child: const Icon(Icons.edit, color: Colors.blue),
+                            child: const Icon(Icons.edit, color: Color(0xFFCA7867)),
                           ),
                         )
                       ],
@@ -152,7 +153,7 @@ class _ProfileScreenMainState extends State<ProfileScreenMain> {
                           : 'Required Field',
                       decoration: InputDecoration(
                           prefixIcon:
-                          const Icon(Icons.person, color: Colors.blue),
+                          const Icon(Icons.person, color: Color(0xFFCA7867)),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12)),
                           hintText: 'eg. Happy Singh',
@@ -171,7 +172,7 @@ class _ProfileScreenMainState extends State<ProfileScreenMain> {
                           : 'Required Field',
                       decoration: InputDecoration(
                           prefixIcon: const Icon(Icons.info_outline,
-                              color: Colors.blue),
+                              color: Color(0xFFCA7867)),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12)),
                           hintText: 'eg. Feeling Happy',
@@ -195,9 +196,9 @@ class _ProfileScreenMainState extends State<ProfileScreenMain> {
                           });
                         }
                       },
-                      icon: const Icon(Icons.edit, size: 28),
+                      icon: const Icon(Icons.edit, size: 28, color: Color(0xFFCA7867)),
                       label:
-                      const Text('UPDATE', style: TextStyle(fontSize: 16)),
+                      const Text('UPDATE', style: TextStyle(fontSize: 16, color: Color(0xFFCA7867))),
                     )
                   ],
                 ),
@@ -258,7 +259,7 @@ class _ProfileScreenMainState extends State<ProfileScreenMain> {
                           if (mounted) Navigator.pop(context);
                         }
                       },
-                      child: Image.asset('images/add_image.png')),
+                      child: Image.asset('assets/images/add_image.png')),
 
                   //take picture from camera button
                   ElevatedButton(
@@ -284,7 +285,7 @@ class _ProfileScreenMainState extends State<ProfileScreenMain> {
                           if (mounted) Navigator.pop(context);
                         }
                       },
-                      child: Image.asset('images/camera.png')),
+                      child: Image.asset('assets/images/camera.png')),
                 ],
               )
             ],

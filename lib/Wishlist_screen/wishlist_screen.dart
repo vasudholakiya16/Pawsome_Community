@@ -21,7 +21,10 @@ class Favourite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
+      backgroundColor: const Color(0xFFFFF0EA),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: 'Favourite'.text.fontFamily(bold).color(const Color(0xFFCA7867)).make(),
       ),
       body: StreamBuilder(
