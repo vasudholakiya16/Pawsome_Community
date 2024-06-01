@@ -8,6 +8,7 @@ import 'package:pass_app_ultron_techonology/Home_screen/home_screen.dart';
 import 'package:pass_app_ultron_techonology/Profile_screen/profile_screen.dart';
 import 'package:pass_app_ultron_techonology/Splesh_screen/Skip1.dart';
 import 'package:pass_app_ultron_techonology/Splesh_screen/Skip2.dart';
+import 'package:pass_app_ultron_techonology/Wishlist_screen/wishlist_screen.dart';
 import 'package:pass_app_ultron_techonology/consts/styles.dart';
 import 'package:pass_app_ultron_techonology/controller/home_controller.dart';
 
@@ -28,11 +29,9 @@ class Home extends StatelessWidget {
     return Scaffold(
       body: Obx(() {
         var navBody = [
-          HomeScreen(),
-          const CatCategoryScreen(title: 'All Favourite',),
-          // const LoginScreen(),
+          const HomeScreen(),
+          const Favourite(),
           const AllProduct(),
-          // const DogCategoryScreen(title: 'All Product',),
           const MessageScreen(),
           ProfileScreenMain(user:APIs.me),
         ];

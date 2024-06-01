@@ -6,13 +6,10 @@ import 'package:pass_app_ultron_techonology/Category_Card/dog_item_details.dart'
 import 'package:pass_app_ultron_techonology/Home_screen/search_card.dart';
 import 'package:pass_app_ultron_techonology/Services/firestore_services.dart';
 import 'package:pass_app_ultron_techonology/consts/colors.dart';
-
 import 'package:pass_app_ultron_techonology/consts/styles.dart';
-
 import 'package:pass_app_ultron_techonology/same_code/homeScreen_Image.dart';
 import 'package:pass_app_ultron_techonology/same_code/loadingIndicator.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import '../Auth_screen/loginscreen.dart';
 import '../Category_Card/cat_category_screen.dart';
 import '../Category_Card/chick_category_screen.dart';
@@ -197,71 +194,86 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
         
             ),
-            50.heightBox,
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: FutureBuilder(
-                  future: FireStoreServices.getFeaturedProduct(),
-                  builder: (BuildContext context,
-                      AsyncSnapshot<QuerySnapshot> snapshot) {
-                    if (!snapshot.hasData) {
-                      return Center(child: loadingIndicator());
-                    } else if (snapshot.data!.docs.isEmpty) {
-                      return "No featured product found"
-                          .text
-                          .color(Colors.white)
-                          .makeCentered();
-                    } else {
-                      var featureproductData = snapshot.data!.docs;
-                      return Row(
-                          children: List.generate(
-                            featureproductData.length,
-                                (index) => Column(
-                              crossAxisAlignment:
-                              CrossAxisAlignment.start,
-                              children: [
-                                Image.network(
-                                  featureproductData[index]['p_images']
-                                  [0],
-                                  width: 150,
-                                  height: 150,
-                                  fit: BoxFit.cover,
-                                ),
-                                10.heightBox,
-                                "${featureproductData[index]['product_name']}"
-                                    .text
-                                    .fontFamily(semibold)
-                                    .color(darkFontGrey)
-                                    .make(),
-                                10.heightBox,
-                                "${featureproductData[index]['p_price']}"
-                                    .numCurrency
-                                    .text
-                                    .color(redColor)
-                                    .fontFamily(bold)
-                                    .size(16)
-                                    .make(),
-                              ],
-                            )
-                                .box
-                                .margin(const EdgeInsets.symmetric(
-                                horizontal: 4))
-                                .white
-                                .roundedSM
-                                .padding(const EdgeInsets.all(8))
-                                .make()
-                                .onTap(() {
-                              Get.to(() => DogItemDetails(
-                                title:
-                                "${featureproductData[index]['product_name']}",
-                                data: featureproductData[index],
-                              ));
-                            }),
-                          ));
-                    }
-                  }),
+            Padding(
+              padding: const EdgeInsets.all(9.0),
+              child: Row(
+                children: [
+                  "Most Visited".text.fontFamily('Mplus').black.size(20).make(),
+                ],
+              ),
             ),
-          ],
+            10.heightBox,
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: FutureBuilder(
+            future: FireStoreServices.getFeaturedProduct(),
+            builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+              if (!snapshot.hasData) {
+                return Center(child: loadingIndicator());
+              } else if (snapshot.data!.docs.isEmpty) {
+                return "No featured product found".text.color(Colors.white).makeCentered();
+              } else {
+                var featureproductData = snapshot.data!.docs;
+                return Row(
+                  children: List.generate(
+                    featureproductData.length,
+                        (index) => GestureDetector(
+                      onTap: () {
+                        Get.to(() => DogItemDetails(
+                          title: "${featureproductData[index]['product_name']}",
+                          data: featureproductData[index],
+                        ));
+                      },
+                      child: Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 4),
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(8),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: Offset(0, 3),
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.network(
+                              featureproductData[index]['p_images'][0],
+                              width: 150,
+                              height: 150,
+                              fit: BoxFit.cover,
+                            ),
+                            10.heightBox,
+                            "${featureproductData[index]['product_name']}"
+                                .text
+                                .fontFamily(semibold)
+                                .color(darkFontGrey)
+                                .make(),
+                            10.heightBox,
+                            "${featureproductData[index]['p_price']}"
+                                .numCurrency
+                                .text
+                                .color(redColor)
+                                .fontFamily(bold)
+                                .size(16)
+                                .make(),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                );
+              }
+            },
+          ),
+        ),
+
+        ],
         ),
       ),
     );
