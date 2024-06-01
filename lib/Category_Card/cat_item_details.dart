@@ -308,11 +308,11 @@ class CatItemDetails extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(16.0, 195.0, 15.0, 13.0),
-                          child: Positioned(
-                            top: 55.0,
-                            left: 0.0,
+                        Positioned(
+                          top: 10.0,
+                          left: 0.0,
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(16.0, 195.0, 15.0, 13.0),
                             child: Container(
                               width: 350.0,
                               child: Column(
@@ -324,15 +324,14 @@ class CatItemDetails extends StatelessWidget {
                                       color: Colors.black,
                                       fontFamily: bold,
                                       fontSize: 16,
-
                                     ),
                                   ),
-                                  SizedBox(height: 10),
+                                  const SizedBox(height: 10),
                                   Text(
                                     data['p_dec'],
                                     textAlign: TextAlign.justify,
-                                    maxLines: 3, // Adjust the number of lines you want to display
-                                    overflow: TextOverflow.ellipsis, // Define how text should overflow
+                                    maxLines: 3,
+                                    overflow: TextOverflow.ellipsis,
                                     style: const TextStyle(
                                       color: Colors.grey,
                                     ),
