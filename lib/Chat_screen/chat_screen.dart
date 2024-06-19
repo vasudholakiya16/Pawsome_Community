@@ -8,9 +8,10 @@ import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/view_profile_screen.dart';
-import 'package:pass_app_ultron_techonology/Modle/chat_user.dart';
-import 'package:pass_app_ultron_techonology/Modle/message.dart';
+
 import 'package:pass_app_ultron_techonology/consts/colors.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Modle/chat_user.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Modle/message.dart';
 import 'my_data_utils.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -293,7 +294,7 @@ class _ChatScreenState extends State<ChatScreen> {
 class MessageCard extends StatelessWidget {
   final Message message;
 
-  const MessageCard({Key? key, required this.message}) : super(key: key);
+  const MessageCard({super.key, required this.message});
 
   @override
   Widget build(BuildContext context) {
@@ -325,7 +326,7 @@ class MessageCard extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15),
             ),
-            color: isMe ? Color(0xFFFFC6B8) : Color(0xFFC2D8FA),
+            color: isMe ? const Color(0xFFFFC6B8) : const Color(0xFFC2D8FA),
             child: Padding(
               padding: EdgeInsets.all(mq.width * 0.04),
               child: Column(
@@ -335,13 +336,13 @@ class MessageCard extends StatelessWidget {
                   // Display the message text
                   Text(
                     message.msg,
-                    style: TextStyle(fontSize: 14, color: Colors.black87),
+                    style: const TextStyle(fontSize: 14, color: Colors.black87),
                   ),
                   SizedBox(height: mq.height * 0.005),
                   // Display the formatted timestamp
                   Text(
                     formattedTime,
-                    style: TextStyle(fontSize: 12, color: Colors.black54),
+                    style: const TextStyle(fontSize: 12, color: Colors.black54),
                   ),
                 ],
               ),

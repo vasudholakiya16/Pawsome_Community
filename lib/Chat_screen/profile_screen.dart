@@ -5,11 +5,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:pass_app_ultron_techonology/Auth_screen/loginscreen.dart';
+
 import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/dialoges.dart';
-import 'package:pass_app_ultron_techonology/Modle/chat_user.dart';
-
+import 'package:pass_app_ultron_techonology/user_screen/Auth_screen/loginscreen.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Modle/chat_user.dart';
 
 class ProfileScreen extends StatefulWidget {
   final ChatUser user;
@@ -26,7 +26,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final mq = MediaQuery.of(context).size;  // Initialize mq here
+    final mq = MediaQuery.of(context).size; // Initialize mq here
 
     return GestureDetector(
       // for hiding keyboard
@@ -58,10 +58,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   // APIs.auth = FirebaseAuth.instance;
 
                   // replacing home screen with login screen
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (_) => LoginScreen()));
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (_) => const LoginScreen()));
                 });
               });
             },
@@ -87,26 +85,26 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       // profile picture
                       _image != null
                           ? ClipRRect(
-                        borderRadius:
-                        BorderRadius.circular(mq.height * .1),
-                        child: Image.file(File(_image!),
-                            width: mq.height * .2,
-                            height: mq.height * .2,
-                            fit: BoxFit.cover),
-                      )
+                              borderRadius:
+                                  BorderRadius.circular(mq.height * .1),
+                              child: Image.file(File(_image!),
+                                  width: mq.height * .2,
+                                  height: mq.height * .2,
+                                  fit: BoxFit.cover),
+                            )
                           : ClipRRect(
-                        borderRadius:
-                        BorderRadius.circular(mq.height * .1),
-                        child: CachedNetworkImage(
-                          width: mq.height * .2,
-                          height: mq.height * .2,
-                          fit: BoxFit.cover,
-                          imageUrl: widget.user.image,
-                          errorWidget: (context, url, error) =>
-                          const CircleAvatar(
-                              child: Icon(CupertinoIcons.person)),
-                        ),
-                      ),
+                              borderRadius:
+                                  BorderRadius.circular(mq.height * .1),
+                              child: CachedNetworkImage(
+                                width: mq.height * .2,
+                                height: mq.height * .2,
+                                fit: BoxFit.cover,
+                                imageUrl: widget.user.image,
+                                errorWidget: (context, url, error) =>
+                                    const CircleAvatar(
+                                        child: Icon(CupertinoIcons.person)),
+                              ),
+                            ),
 
                       // edit image button
                       Positioned(
@@ -117,7 +115,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           onPressed: _showBottomSheet,
                           shape: const CircleBorder(),
                           color: Colors.white,
-                          child: const Icon(Icons.edit, color:Color(0xFFCA7867)),
+                          child:
+                              const Icon(Icons.edit, color: Color(0xFFCA7867)),
                         ),
                       )
                     ],
@@ -128,8 +127,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                   // user email label
                   Text(widget.user.email,
-                      style: const TextStyle(
-                          color: Colors.black54, fontSize: 16)),
+                      style:
+                          const TextStyle(color: Colors.black54, fontSize: 16)),
 
                   // for adding some space
                   SizedBox(height: mq.height * .05),
@@ -138,11 +137,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   TextFormField(
                     initialValue: widget.user.name,
                     onSaved: (val) => APIs.me.name = val ?? '',
-                    validator: (val) => val != null && val.isNotEmpty
-                        ? null
-                        : 'Required Field',
+                    validator: (val) =>
+                        val != null && val.isNotEmpty ? null : 'Required Field',
                     decoration: InputDecoration(
-                        prefixIcon: const Icon(Icons.person, color: Color(0xFFCA7867)),
+                        prefixIcon:
+                            const Icon(Icons.person, color: Color(0xFFCA7867)),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12)),
                         hintText: 'eg. Happy Singh',
@@ -156,9 +155,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   TextFormField(
                     initialValue: widget.user.about,
                     onSaved: (val) => APIs.me.about = val ?? '',
-                    validator: (val) => val != null && val.isNotEmpty
-                        ? null
-                        : 'Required Field',
+                    validator: (val) =>
+                        val != null && val.isNotEmpty ? null : 'Required Field',
                     decoration: InputDecoration(
                         prefixIcon: const Icon(Icons.info_outline,
                             color: Color(0xFFCA7867)),
@@ -186,8 +184,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       }
                     },
                     icon: const Icon(Icons.edit, size: 28),
-                    label:
-                    const Text('UPDATE', style: TextStyle(fontSize: 16)),
+                    label: const Text('UPDATE', style: TextStyle(fontSize: 16)),
                   )
                 ],
               ),
@@ -200,7 +197,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   // bottom sheet for picking a profile picture for user
   void _showBottomSheet() {
-    final mq = MediaQuery.of(context).size;  // Initialize mq here as well
+    final mq = MediaQuery.of(context).size; // Initialize mq here as well
 
     showModalBottomSheet(
         context: context,
@@ -211,7 +208,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           return ListView(
             shrinkWrap: true,
             padding:
-            EdgeInsets.only(top: mq.height * .03, bottom: mq.height * .05),
+                EdgeInsets.only(top: mq.height * .03, bottom: mq.height * .05),
             children: [
               // pick profile picture label
               const Text('Pick Profile Picture',
@@ -254,7 +251,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   // take picture from camera button
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFFFFECE7),
+                          backgroundColor: const Color(0xFFFFECE7),
                           shape: const CircleBorder(),
                           fixedSize: Size(mq.width * .3, mq.height * .15)),
                       onPressed: () async {

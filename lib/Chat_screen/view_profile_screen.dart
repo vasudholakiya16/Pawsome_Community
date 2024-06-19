@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/my_data_utils.dart';
-import 'package:pass_app_ultron_techonology/Modle/chat_user.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Modle/chat_user.dart';
 
 //view profile screen -- to view profile of user
 class ViewProfileScreen extends StatefulWidget {
@@ -17,18 +17,14 @@ class ViewProfileScreen extends StatefulWidget {
 class _ViewProfileScreenState extends State<ViewProfileScreen> {
   @override
   Widget build(BuildContext context) {
-    final mq = MediaQuery
-        .of(context)
-        .size;
+    final mq = MediaQuery.of(context).size;
 
     return GestureDetector(
       // for hiding keyboard
-      onTap: FocusScope
-          .of(context)
-          .unfocus,
+      onTap: FocusScope.of(context).unfocus,
       child: Scaffold(
           backgroundColor: const Color(0xFFFFF0EA),
-        //app bar
+          //app bar
           appBar: AppBar(title: Text(widget.user.name)),
 
           //user about
@@ -68,8 +64,7 @@ class _ViewProfileScreenState extends State<ViewProfileScreen> {
                       height: mq.height * .2,
                       fit: BoxFit.cover,
                       imageUrl: widget.user.image,
-                      errorWidget: (context, url, error) =>
-                      const CircleAvatar(
+                      errorWidget: (context, url, error) => const CircleAvatar(
                           child: Icon(CupertinoIcons.person)),
                     ),
                   ),
@@ -80,7 +75,7 @@ class _ViewProfileScreenState extends State<ViewProfileScreen> {
                   // user email label
                   Text(widget.user.email,
                       style:
-                      const TextStyle(color: Colors.black87, fontSize: 16)),
+                          const TextStyle(color: Colors.black87, fontSize: 16)),
 
                   // for adding some space
                   SizedBox(height: mq.height * .02),

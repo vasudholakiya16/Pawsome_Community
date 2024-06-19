@@ -7,11 +7,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:http/http.dart';
-import 'package:pass_app_ultron_techonology/Modle/chat_user.dart';
-import 'package:pass_app_ultron_techonology/Modle/message.dart';
-import 'package:pass_app_ultron_techonology/controller/notification_access_token.dart';
-
-
+import 'package:pass_app_ultron_techonology/Chat_screen/notification_access_token.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Modle/chat_user.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Modle/message.dart';
 
 class APIs {
   // for authentication
@@ -193,10 +191,10 @@ class APIs {
     return firestore
         .collection('users')
         .where('id',
-        whereIn: userIds.isEmpty
-            ? ['']
-            : userIds) //because empty list throws an error
-    // .where('id', isNotEqualTo: user.uid)
+            whereIn: userIds.isEmpty
+                ? ['']
+                : userIds) //because empty list throws an error
+        // .where('id', isNotEqualTo: user.uid)
         .snapshots();
   }
 

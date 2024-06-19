@@ -6,14 +6,11 @@ import 'package:gallery_saver_updated/gallery_saver.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/dialoges.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/my_data_utils.dart';
-import 'package:pass_app_ultron_techonology/Modle/message.dart';
 import 'package:pass_app_ultron_techonology/main.dart';
-
-
+import 'package:pass_app_ultron_techonology/user_screen/Modle/message.dart';
 
 // for showing single message details
 class MessageCard extends StatefulWidget {
-
   const MessageCard({super.key, required this.message});
 
   final Message message;
@@ -29,6 +26,7 @@ class _MessageCardState extends State<MessageCard> {
     super.initState();
     mq = MediaQuery.of(context).size;
   }
+
   @override
   Widget build(BuildContext context) {
     // Initialize mq with MediaQuery size
@@ -69,26 +67,26 @@ class _MessageCardState extends State<MessageCard> {
                     bottomRight: Radius.circular(30))),
             child: widget.message.type == Type.text
                 ?
-            //show text
-            Text(
-              widget.message.msg,
-              style: const TextStyle(fontSize: 15, color: Colors.black87),
-            )
+                //show text
+                Text(
+                    widget.message.msg,
+                    style: const TextStyle(fontSize: 15, color: Colors.black87),
+                  )
                 :
-            //show image
-            ClipRRect(
-              borderRadius: BorderRadius.circular(15),
-              child: CachedNetworkImage(
-                imageUrl: widget.message.msg,
-                fit: BoxFit.cover,
-                placeholder: (context, url) => const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CircularProgressIndicator(strokeWidth: 2),
-                ),
-                errorWidget: (context, url, error) =>
-                const Icon(Icons.image, size: 70),
-              ),
-            ),
+                //show image
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: CachedNetworkImage(
+                      imageUrl: widget.message.msg,
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) => const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      ),
+                      errorWidget: (context, url, error) =>
+                          const Icon(Icons.image, size: 70),
+                    ),
+                  ),
           ),
         ),
 
@@ -101,9 +99,6 @@ class _MessageCardState extends State<MessageCard> {
           ),
           style: const TextStyle(fontSize: 13, color: Colors.black54),
         ),
-
-
-
       ],
     );
   }
@@ -135,7 +130,6 @@ class _MessageCardState extends State<MessageCard> {
               ),
               style: const TextStyle(fontSize: 13, color: Colors.black54),
             ),
-
           ],
         ),
 
@@ -157,25 +151,25 @@ class _MessageCardState extends State<MessageCard> {
                     bottomLeft: Radius.circular(30))),
             child: widget.message.type == Type.text
                 ?
-            //show text
-            Text(
-              widget.message.msg,
-              style: const TextStyle(fontSize: 15, color: Colors.black87),
-            )
+                //show text
+                Text(
+                    widget.message.msg,
+                    style: const TextStyle(fontSize: 15, color: Colors.black87),
+                  )
                 :
-            //show image
-            ClipRRect(
-              borderRadius: BorderRadius.circular(15),
-              child: CachedNetworkImage(
-                imageUrl: widget.message.msg,
-                placeholder: (context, url) => const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CircularProgressIndicator(strokeWidth: 2),
-                ),
-                errorWidget: (context, url, error) =>
-                const Icon(Icons.image, size: 70),
-              ),
-            ),
+                //show image
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: CachedNetworkImage(
+                      imageUrl: widget.message.msg,
+                      placeholder: (context, url) => const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      ),
+                      errorWidget: (context, url, error) =>
+                          const Icon(Icons.image, size: 70),
+                    ),
+                  ),
           ),
         ),
       ],
@@ -204,44 +198,44 @@ class _MessageCardState extends State<MessageCard> {
 
               widget.message.type == Type.text
                   ?
-              //copy option
-              _OptionItem(
-                  icon: const Icon(Icons.copy_all_rounded,
-                      color: Colors.blue, size: 26),
-                  name: 'Copy Text',
-                  onTap: () async {
-                    await Clipboard.setData(
-                        ClipboardData(text: widget.message.msg))
-                        .then((value) {
-                      //for hiding bottom sheet
-                      Navigator.pop(context);
+                  //copy option
+                  _OptionItem(
+                      icon: const Icon(Icons.copy_all_rounded,
+                          color: Colors.blue, size: 26),
+                      name: 'Copy Text',
+                      onTap: () async {
+                        await Clipboard.setData(
+                                ClipboardData(text: widget.message.msg))
+                            .then((value) {
+                          //for hiding bottom sheet
+                          Navigator.pop(context);
 
-                      Dialogs.showSnackbar(context, 'Text Copied!');
-                    });
-                  })
+                          Dialogs.showSnackbar(context, 'Text Copied!');
+                        });
+                      })
                   :
-              //save option
-              _OptionItem(
-                  icon: const Icon(Icons.download_rounded,
-                      color: Color(0xFFCA7867), size: 26),
-                  name: 'Save Image',
-                  onTap: () async {
-                    try {
-                      log('Image Url: ${widget.message.msg}');
-                      await GallerySaver.saveImage(widget.message.msg,
-                          albumName: 'We Chat')
-                          .then((success) {
-                        //for hiding bottom sheet
-                        Navigator.pop(context);
-                        if (success != null && success) {
-                          Dialogs.showSnackbar(
-                              context, 'Image Successfully Saved!');
+                  //save option
+                  _OptionItem(
+                      icon: const Icon(Icons.download_rounded,
+                          color: Color(0xFFCA7867), size: 26),
+                      name: 'Save Image',
+                      onTap: () async {
+                        try {
+                          log('Image Url: ${widget.message.msg}');
+                          await GallerySaver.saveImage(widget.message.msg,
+                                  albumName: 'We Chat')
+                              .then((success) {
+                            //for hiding bottom sheet
+                            Navigator.pop(context);
+                            if (success != null && success) {
+                              Dialogs.showSnackbar(
+                                  context, 'Image Successfully Saved!');
+                            }
+                          });
+                        } catch (e) {
+                          log('ErrorWhileSavingImg: $e');
                         }
-                      });
-                    } catch (e) {
-                      log('ErrorWhileSavingImg: $e');
-                    }
-                  }),
+                      }),
 
               //separator or divider
               if (isMe)
@@ -254,7 +248,8 @@ class _MessageCardState extends State<MessageCard> {
               //edit option
               if (widget.message.type == Type.text && isMe)
                 _OptionItem(
-                    icon: const Icon(Icons.edit, color:Color(0xFFCA7867) , size: 26),
+                    icon: const Icon(Icons.edit,
+                        color: Color(0xFFCA7867), size: 26),
                     name: 'Edit Message',
                     onTap: () {
                       //for hiding bottom sheet
@@ -287,7 +282,7 @@ class _MessageCardState extends State<MessageCard> {
               _OptionItem(
                   icon: const Icon(Icons.remove_red_eye, color: Colors.blue),
                   name:
-                  'Sent At: ${MyDateUtil.getMessageTime(context: context, time: widget.message.sent)}',
+                      'Sent At: ${MyDateUtil.getMessageTime(context: context, time: widget.message.sent)}',
                   onTap: () {}),
 
               //read time
@@ -309,60 +304,60 @@ class _MessageCardState extends State<MessageCard> {
     showDialog(
         context: context,
         builder: (_) => AlertDialog(
-          contentPadding: const EdgeInsets.only(
-              left: 24, right: 24, top: 20, bottom: 10),
+              contentPadding: const EdgeInsets.only(
+                  left: 24, right: 24, top: 20, bottom: 10),
 
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
 
-          //title
-          title: const Row(
-            children: [
-              Icon(
-                Icons.message,
-                color: Colors.blue,
-                size: 28,
+              //title
+              title: const Row(
+                children: [
+                  Icon(
+                    Icons.message,
+                    color: Colors.blue,
+                    size: 28,
+                  ),
+                  Text(' Update Message')
+                ],
               ),
-              Text(' Update Message')
-            ],
-          ),
 
-          //content
-          content: TextFormField(
-            initialValue: updatedMsg,
-            maxLines: null,
-            onChanged: (value) => updatedMsg = value,
-            decoration: InputDecoration(
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15))),
-          ),
+              //content
+              content: TextFormField(
+                initialValue: updatedMsg,
+                maxLines: null,
+                onChanged: (value) => updatedMsg = value,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15))),
+              ),
 
-          //actions
-          actions: [
-            //cancel button
-            MaterialButton(
-                onPressed: () {
-                  //hide alert dialog
-                  Navigator.pop(context);
-                },
-                child: const Text(
-                  'Cancel',
-                  style: TextStyle(color: Colors.blue, fontSize: 16),
-                )),
+              //actions
+              actions: [
+                //cancel button
+                MaterialButton(
+                    onPressed: () {
+                      //hide alert dialog
+                      Navigator.pop(context);
+                    },
+                    child: const Text(
+                      'Cancel',
+                      style: TextStyle(color: Colors.blue, fontSize: 16),
+                    )),
 
-            //update button
-            MaterialButton(
-                onPressed: () {
-                  //hide alert dialog
-                  Navigator.pop(context);
-                  APIs.updateMessage(widget.message, updatedMsg);
-                },
-                child: const Text(
-                  'Update',
-                  style: TextStyle(color: Colors.blue, fontSize: 16),
-                ))
-          ],
-        ));
+                //update button
+                MaterialButton(
+                    onPressed: () {
+                      //hide alert dialog
+                      Navigator.pop(context);
+                      APIs.updateMessage(widget.message, updatedMsg);
+                    },
+                    child: const Text(
+                      'Update',
+                      style: TextStyle(color: Colors.blue, fontSize: 16),
+                    ))
+              ],
+            ));
   }
 }
 

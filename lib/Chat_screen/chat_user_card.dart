@@ -5,9 +5,8 @@ import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/chat_screen.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/my_data_utils.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/profile_dialoge.dart';
-import 'package:pass_app_ultron_techonology/Modle/chat_user.dart';
-import 'package:pass_app_ultron_techonology/Modle/message.dart';
-
+import 'package:pass_app_ultron_techonology/user_screen/Modle/chat_user.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Modle/message.dart';
 
 class ChatUserCard extends StatefulWidget {
   final ChatUser user;
@@ -29,6 +28,7 @@ class _ChatUserCardState extends State<ChatUserCard> {
     // Initialize mq in the initState method
     // mq = Size.zero;
   }
+
   @override
   Widget build(BuildContext context) {
     // Remove the local declaration of mq
@@ -50,8 +50,8 @@ class _ChatUserCardState extends State<ChatUserCard> {
           stream: APIs.getLastMessage(widget.user),
           builder: (context, snapshot) {
             final data = snapshot.data?.docs;
-            final list = data?.map((e) => Message.fromJson(e.data())).toList() ??
-                [];
+            final list =
+                data?.map((e) => Message.fromJson(e.data())).toList() ?? [];
             if (list.isNotEmpty) _message = list[0];
 
             return ListTile(
@@ -71,7 +71,7 @@ class _ChatUserCardState extends State<ChatUserCard> {
                     imageUrl: widget.user.image,
                     fit: BoxFit.cover,
                     errorWidget: (context, url, error) =>
-                    const CircleAvatar(child: Icon(CupertinoIcons.person)),
+                        const CircleAvatar(child: Icon(CupertinoIcons.person)),
                   ),
                 ),
               ),
@@ -83,8 +83,8 @@ class _ChatUserCardState extends State<ChatUserCard> {
               subtitle: Text(
                 _message != null
                     ? _message!.type == Type.image
-                    ? 'image'
-                    : _message!.msg
+                        ? 'image'
+                        : _message!.msg
                     : widget.user.about,
                 maxLines: 1,
               ),
@@ -93,21 +93,21 @@ class _ChatUserCardState extends State<ChatUserCard> {
               trailing: _message == null
                   ? null //show nothing when no message is sent
                   : _message!.read.isEmpty && _message!.fromId != APIs.user.uid
-                  ? //show for unread message
-              Container(
-                width: 15,
-                height: 15,
-                decoration: BoxDecoration(
-                  color: Colors.greenAccent.shade400,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              )
-                  : //message sent time
-              Text(
-                MyDateUtil.getLastMessageTime(
-                    context: context, time: _message!.sent),
-                style: const TextStyle(color: Colors.black54),
-              ),
+                      ? //show for unread message
+                      Container(
+                          width: 15,
+                          height: 15,
+                          decoration: BoxDecoration(
+                            color: Colors.greenAccent.shade400,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        )
+                      : //message sent time
+                      Text(
+                          MyDateUtil.getLastMessageTime(
+                              context: context, time: _message!.sent),
+                          style: const TextStyle(color: Colors.black54),
+                        ),
             );
           },
         ),

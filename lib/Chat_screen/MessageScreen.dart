@@ -2,10 +2,10 @@ import 'dart:developer';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pass_app_ultron_techonology/Chat_screen/dialoges.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/profile_screen.dart';
 import 'package:pass_app_ultron_techonology/consts/colors.dart';
-import '../../Modle/chat_user.dart';
-import '../../same_code/dialogs.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Modle/chat_user.dart';
 import 'apis.dart';
 import 'chat_user_card.dart';
 
@@ -72,29 +72,32 @@ class _MessageScreenState extends State<MessageScreen> {
           // App bar
           appBar: AppBar(
             automaticallyImplyLeading: false,
-              backgroundColor: const Color(0xFFFFECE7),
+            backgroundColor: const Color(0xFFFFECE7),
             // leading: const Icon(CupertinoIcons.home),
             title: _isSearching
                 ? TextField(
-              decoration: const InputDecoration(
-                  border: InputBorder.none, hintText: 'Name, Email, ...'),
-              autofocus: true,
-              style: const TextStyle(fontSize: 17, letterSpacing: 0.5),
-              // When search text changes then update search list
-              onChanged: (val) {
-                // Search logic
-                _searchList.clear();
+                    decoration: const InputDecoration(
+                        border: InputBorder.none, hintText: 'Name, Email, ...'),
+                    autofocus: true,
+                    style: const TextStyle(fontSize: 17, letterSpacing: 0.5),
+                    // When search text changes then update search list
+                    onChanged: (val) {
+                      // Search logic
+                      _searchList.clear();
 
-                for (var i in _list) {
-                  if (i.name.toLowerCase().contains(val.toLowerCase()) ||
-                      i.email.toLowerCase().contains(val.toLowerCase())) {
-                    _searchList.add(i);
-                    setState(() {});
-                  }
-                }
-              },
-            )
-                : const Text('Message',style: TextStyle(color:  Color(0xFFCA7867)), ),
+                      for (var i in _list) {
+                        if (i.name.toLowerCase().contains(val.toLowerCase()) ||
+                            i.email.toLowerCase().contains(val.toLowerCase())) {
+                          _searchList.add(i);
+                          setState(() {});
+                        }
+                      }
+                    },
+                  )
+                : const Text(
+                    'Message',
+                    style: TextStyle(color: Color(0xFFCA7867)),
+                  ),
             actions: [
               // Search user button
               IconButton(
@@ -103,9 +106,12 @@ class _MessageScreenState extends State<MessageScreen> {
                       _isSearching = !_isSearching;
                     });
                   },
-                  icon: Icon(_isSearching
-                      ? CupertinoIcons.clear_circled_solid
-                      : Icons.search,color: const Color(0xFFCA7867),)),
+                  icon: Icon(
+                    _isSearching
+                        ? CupertinoIcons.clear_circled_solid
+                        : Icons.search,
+                    color: const Color(0xFFCA7867),
+                  )),
 
               // More features button
               IconButton(
@@ -115,7 +121,10 @@ class _MessageScreenState extends State<MessageScreen> {
                         MaterialPageRoute(
                             builder: (_) => ProfileScreen(user: APIs.me)));
                   },
-                  icon: const Icon(Icons.more_vert,color:Color(0xFFCA7867) ,))
+                  icon: const Icon(
+                    Icons.more_vert,
+                    color: Color(0xFFCA7867),
+                  ))
             ],
           ),
 
@@ -123,14 +132,15 @@ class _MessageScreenState extends State<MessageScreen> {
           floatingActionButton: Padding(
             padding: const EdgeInsets.only(bottom: 10),
             child: FloatingActionButton(
-                onPressed: () {
-                  _addChatUserDialog();
-                },
+              onPressed: () {
+                _addChatUserDialog();
+              },
               backgroundColor: Color(0xFFFFECE7),
               child: const Icon(
                 Icons.add_comment_rounded,
                 color: punk, // Set the icon color here
-              ),),
+              ),
+            ),
           ),
 // Body with background color
           backgroundColor: Color(0xFFFFECE7),
@@ -141,12 +151,12 @@ class _MessageScreenState extends State<MessageScreen> {
             // Get id of only known users
             builder: (context, snapshot) {
               switch (snapshot.connectionState) {
-              // If data is loading
+                // If data is loading
                 case ConnectionState.waiting:
                 case ConnectionState.none:
                   return const Center(child: CircularProgressIndicator());
 
-              // If some or all data is loaded then show it
+                // If some or all data is loaded then show it
                 case ConnectionState.active:
                 case ConnectionState.done:
                   return StreamBuilder(
@@ -156,19 +166,19 @@ class _MessageScreenState extends State<MessageScreen> {
                     // Get only those users whose ids are provided
                     builder: (context, snapshot) {
                       switch (snapshot.connectionState) {
-                      // If data is loading
+                        // If data is loading
                         case ConnectionState.waiting:
                         case ConnectionState.none:
                           return const Center(
                               child: CircularProgressIndicator());
 
-                      // If some or all data is loaded then show it
+                        // If some or all data is loaded then show it
                         case ConnectionState.active:
                         case ConnectionState.done:
                           final data = snapshot.data?.docs;
                           _list = data
-                              ?.map((e) => ChatUser.fromJson(e.data()))
-                              .toList() ??
+                                  ?.map((e) => ChatUser.fromJson(e.data()))
+                                  .toList() ??
                               [];
 
                           if (_list.isNotEmpty) {
@@ -208,64 +218,64 @@ class _MessageScreenState extends State<MessageScreen> {
     showDialog(
         context: context,
         builder: (_) => AlertDialog(
-          contentPadding: const EdgeInsets.only(
-              left: 24, right: 24, top: 20, bottom: 10),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20)),
+              contentPadding: const EdgeInsets.only(
+                  left: 24, right: 24, top: 20, bottom: 10),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
 
-          // Title
-          title: const Row(
-            children: [
-              Icon(
-                Icons.person_add,
-                color: punk,
-                size: 28,
+              // Title
+              title: const Row(
+                children: [
+                  Icon(
+                    Icons.person_add,
+                    color: punk,
+                    size: 28,
+                  ),
+                  Text('  Add User')
+                ],
               ),
-              Text('  Add User')
-            ],
-          ),
 
-          // Content
-          content: TextFormField(
-            maxLines: null,
-            onChanged: (value) => email = value,
-            decoration: InputDecoration(
-                hintText: 'Email Id',
-                prefixIcon: const Icon(Icons.email, color:punk),
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15))),
-          ),
+              // Content
+              content: TextFormField(
+                maxLines: null,
+                onChanged: (value) => email = value,
+                decoration: InputDecoration(
+                    hintText: 'Email Id',
+                    prefixIcon: const Icon(Icons.email, color: punk),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15))),
+              ),
 
-          // Actions
-          actions: [
-            // Cancel button
-            MaterialButton(
-                onPressed: () {
-                  // Hide alert dialog
-                  Navigator.pop(context);
-                },
-                child: const Text('Cancel',
-                    style: TextStyle(color: punk, fontSize: 16))),
+              // Actions
+              actions: [
+                // Cancel button
+                MaterialButton(
+                    onPressed: () {
+                      // Hide alert dialog
+                      Navigator.pop(context);
+                    },
+                    child: const Text('Cancel',
+                        style: TextStyle(color: punk, fontSize: 16))),
 
-            // Add button
-            MaterialButton(
-                onPressed: () async {
-                  // Hide alert dialog
-                  Navigator.pop(context);
-                  if (email.isNotEmpty) {
-                    await APIs.addChatUser(email).then((value) {
-                      if (!value) {
-                        Dialogs.showSnackbar(
-                            context, 'User does not Exist!');
+                // Add button
+                MaterialButton(
+                    onPressed: () async {
+                      // Hide alert dialog
+                      Navigator.pop(context);
+                      if (email.isNotEmpty) {
+                        await APIs.addChatUser(email).then((value) {
+                          if (!value) {
+                            Dialogs.showSnackbar(
+                                context, 'User does not Exist!');
+                          }
+                        });
                       }
-                    });
-                  }
-                },
-                child: const Text(
-                  'Add',
-                  style: TextStyle(color: punk, fontSize: 16),
-                ))
-          ],
-        ));
+                    },
+                    child: const Text(
+                      'Add',
+                      style: TextStyle(color: punk, fontSize: 16),
+                    ))
+              ],
+            ));
   }
 }

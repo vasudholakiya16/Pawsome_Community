@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pass_app_ultron_techonology/Auth_screen/loginscreen.dart';
+import 'package:pass_app_ultron_techonology/Splesh_screen/selection_screen.dart';
+
 import '../consts/colors.dart';
 
 class Skip3 extends StatefulWidget {
@@ -132,7 +133,7 @@ class _Skip2State extends State<Skip3> {
                   alignment: const Alignment(0.8, 0.9),
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(() => const LoginScreen());
+                      Get.to(() => const UserDoctor());
                     },
                     child: Container(
                       width: mq.size.width * 0.15,
@@ -155,7 +156,7 @@ class _Skip2State extends State<Skip3> {
                   alignment: const Alignment(-3.0, 1.0),
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(() => const LoginScreen());
+                      Get.to(() => const UserDoctor());
                     },
                     child: SizedBox(
                       width: mq.size.width * 0.75,
