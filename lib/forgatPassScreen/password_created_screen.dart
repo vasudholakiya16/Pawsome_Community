@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../Auth_screen/loginscreen.dart';
 
 class PasswordCreatedScreen extends StatelessWidget {
-  const PasswordCreatedScreen({Key? key}) : super(key: key);
+  const PasswordCreatedScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +64,7 @@ class PasswordCreatedScreen extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) =>  LoginScreen()));
+                                builder: (context) => const LoginScreen()));
                       },
                       child: const Padding(
                         padding: EdgeInsets.all(15.0),

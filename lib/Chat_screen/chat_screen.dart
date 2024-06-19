@@ -16,7 +16,7 @@ import 'my_data_utils.dart';
 class ChatScreen extends StatefulWidget {
   final ChatUser user;
 
-  const ChatScreen({Key? key, required this.user}) : super(key: key);
+  const ChatScreen({super.key, required this.user});
 
   @override
   State<ChatScreen> createState() => _ChatScreenState();
@@ -64,8 +64,8 @@ class _ChatScreenState extends State<ChatScreen> {
                         case ConnectionState.done:
                           final data = snapshot.data?.docs;
                           _list = data
-                              ?.map((e) => Message.fromJson(e.data()))
-                              .toList() ??
+                                  ?.map((e) => Message.fromJson(e.data()))
+                                  .toList() ??
                               [];
 
                           if (_list.isNotEmpty) {
@@ -92,8 +92,8 @@ class _ChatScreenState extends State<ChatScreen> {
                   const Align(
                     alignment: Alignment.centerRight,
                     child: Padding(
-                      padding: EdgeInsets.symmetric(
-                          vertical: 8, horizontal: 20),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 8, horizontal: 20),
                       child: CircularProgressIndicator(strokeWidth: 2),
                     ),
                   ),
@@ -129,11 +129,16 @@ class _ChatScreenState extends State<ChatScreen> {
           stream: APIs.getUserInfo(widget.user),
           builder: (context, snapshot) {
             final data = snapshot.data?.docs;
-            final list = data?.map((e) => ChatUser.fromJson(e.data())).toList() ?? [];
+            final list =
+                data?.map((e) => ChatUser.fromJson(e.data())).toList() ?? [];
 
             // Fallback image URL or placeholder for invalid URLs
-            final imageUrl = (list.isNotEmpty && list[0].image.isNotEmpty) ? list[0].image : widget.user.image;
-            final validImageUrl = imageUrl.isNotEmpty ? imageUrl : 'https://example.com/placeholder.jpg'; // Fallback placeholder URL
+            final imageUrl = (list.isNotEmpty && list[0].image.isNotEmpty)
+                ? list[0].image
+                : widget.user.image;
+            final validImageUrl = imageUrl.isNotEmpty
+                ? imageUrl
+                : 'https://example.com/placeholder.jpg'; // Fallback placeholder URL
 
             return Row(
               children: [
@@ -148,7 +153,8 @@ class _ChatScreenState extends State<ChatScreen> {
                     height: mq.height * .05,
                     fit: BoxFit.cover,
                     imageUrl: validImageUrl,
-                    errorWidget: (context, url, error) => const CircleAvatar(child: Icon(CupertinoIcons.person)),
+                    errorWidget: (context, url, error) =>
+                        const CircleAvatar(child: Icon(CupertinoIcons.person)),
                   ),
                 ),
                 const SizedBox(width: 10),
@@ -168,14 +174,15 @@ class _ChatScreenState extends State<ChatScreen> {
                     Text(
                       list.isNotEmpty
                           ? list[0].isOnline
-                          ? 'Online'
+                              ? 'Online'
+                              : MyDateUtil.getLastActiveTime(
+                                  context: context,
+                                  lastActive: list[0].lastActive)
                           : MyDateUtil.getLastActiveTime(
-                          context: context,
-                          lastActive: list[0].lastActive)
-                          : MyDateUtil.getLastActiveTime(
-                          context: context,
-                          lastActive: widget.user.lastActive),
-                      style: const TextStyle(fontSize: 13, color: Colors.black54),
+                              context: context,
+                              lastActive: widget.user.lastActive),
+                      style:
+                          const TextStyle(fontSize: 13, color: Colors.black54),
                     ),
                   ],
                 ),
@@ -187,15 +194,16 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 
-
   Widget _chatInput() {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: mq.height * 0.01, horizontal: mq.width * 0.025),
+      padding: EdgeInsets.symmetric(
+          vertical: mq.height * 0.01, horizontal: mq.width * 0.025),
       child: Row(
         children: [
           Expanded(
             child: Card(
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
               child: Row(
                 children: [
                   IconButton(
@@ -203,7 +211,8 @@ class _ChatScreenState extends State<ChatScreen> {
                       FocusScope.of(context).unfocus();
                       setState(() => _showEmoji = !_showEmoji);
                     },
-                    icon: const Icon(Icons.emoji_emotions, color: punk, size: 25),
+                    icon:
+                        const Icon(Icons.emoji_emotions, color: punk, size: 25),
                   ),
                   Expanded(
                     child: TextField(
@@ -211,7 +220,8 @@ class _ChatScreenState extends State<ChatScreen> {
                       keyboardType: TextInputType.multiline,
                       maxLines: null,
                       onTap: () {
-                        if (_showEmoji) setState(() => _showEmoji = !_showEmoji);
+                        if (_showEmoji)
+                          setState(() => _showEmoji = !_showEmoji);
                       },
                       decoration: const InputDecoration(
                         hintText: 'Type Something...',
@@ -223,7 +233,8 @@ class _ChatScreenState extends State<ChatScreen> {
                   IconButton(
                     onPressed: () async {
                       final ImagePicker picker = ImagePicker();
-                      final List<XFile> images = await picker.pickMultiImage(imageQuality: 70);
+                      final List<XFile> images =
+                          await picker.pickMultiImage(imageQuality: 70);
                       for (var i in images) {
                         log('Image Path: ${i.path}');
                         setState(() => _isUploading = true);
@@ -236,7 +247,8 @@ class _ChatScreenState extends State<ChatScreen> {
                   IconButton(
                     onPressed: () async {
                       final ImagePicker picker = ImagePicker();
-                      final XFile? image = await picker.pickImage(source: ImageSource.camera, imageQuality: 70);
+                      final XFile? image = await picker.pickImage(
+                          source: ImageSource.camera, imageQuality: 70);
                       if (image != null) {
                         log('Image Path: ${image.path}');
                         setState(() => _isUploading = true);
@@ -244,7 +256,8 @@ class _ChatScreenState extends State<ChatScreen> {
                         setState(() => _isUploading = false);
                       }
                     },
-                    icon: const Icon(Icons.camera_alt_rounded, color: punk, size: 26),
+                    icon: const Icon(Icons.camera_alt_rounded,
+                        color: punk, size: 26),
                   ),
                   const SizedBox(width: 8),
                 ],
@@ -255,15 +268,18 @@ class _ChatScreenState extends State<ChatScreen> {
             onPressed: () {
               if (_textController.text.isNotEmpty) {
                 if (_list.isEmpty) {
-                  APIs.sendFirstMessage(widget.user, _textController.text, Type.text);
+                  APIs.sendFirstMessage(
+                      widget.user, _textController.text, Type.text);
                 } else {
-                  APIs.sendMessage(widget.user, _textController.text, Type.text);
+                  APIs.sendMessage(
+                      widget.user, _textController.text, Type.text);
                 }
                 _textController.text = '';
               }
             },
             minWidth: 0,
-            padding: const EdgeInsets.only(top: 10, bottom: 10, right: 5, left: 10),
+            padding:
+                const EdgeInsets.only(top: 10, bottom: 10, right: 5, left: 10),
             shape: const CircleBorder(),
             color: punk,
             child: const Icon(Icons.send, color: Colors.white, size: 28),
@@ -290,7 +306,8 @@ class MessageCard extends StatelessWidget {
     String formattedTime = '';
     try {
       final DateTime timestamp = DateTime.parse(message.sent);
-      formattedTime = DateFormat('hh:mm a').format(timestamp); // Adjust the format as needed
+      formattedTime = DateFormat('hh:mm a')
+          .format(timestamp); // Adjust the format as needed
     } catch (e) {
       // Handle parsing errors
       debugPrint('Error parsing timestamp: $e');
@@ -313,7 +330,7 @@ class MessageCard extends StatelessWidget {
               padding: EdgeInsets.all(mq.width * 0.04),
               child: Column(
                 crossAxisAlignment:
-                isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+                    isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
                 children: [
                   // Display the message text
                   Text(

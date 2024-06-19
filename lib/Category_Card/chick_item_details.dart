@@ -1,21 +1,20 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:pass_app_ultron_techonology/Chat_screen/MessageScreen.dart';
+import 'package:pass_app_ultron_techonology/consts/colors.dart';
+import 'package:pass_app_ultron_techonology/controller/whichList_controller.dart';
+import 'package:pass_app_ultron_techonology/same_code/outButton.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-import '../consts/colors.dart';
 import '../consts/styles.dart';
 import '../controller/product_controller.dart';
-import '../same_code/outButton.dart';
 
 class ChickItemDetails extends StatelessWidget {
   final String? title;
   final dynamic data;
 
-  const ChickItemDetails({Key? key, required this.title, this.data})
-      : super(key: key);
+  ChickItemDetails({super.key, required this.title, this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,7 @@ class ChickItemDetails extends StatelessWidget {
         return true;
       },
       child: Scaffold(
-        backgroundColor: Color(0xFFFFF0EA),
+        backgroundColor: const Color(0xFFFFF0EA),
         appBar: AppBar(
           leading: IconButton(
             onPressed: () {
@@ -53,21 +52,23 @@ class ChickItemDetails extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            Obx(() => IconButton(
-              onPressed: () {
-                if (controller.isFav.value) {
-                  controller.removeFromWishlist(data.id, context);
-                  controller.isFav(false);
-                } else {
-                  controller.addToWishlist(data.id, context);
-                  controller.isFav(true);
-                }
-              },
-              icon: Icon(
-                Icons.favorite_outlined,
-                color: controller.isFav.value ? redColor : Colors.black,
+            Obx(
+              () => IconButton(
+                onPressed: () {
+                  if (controller.isFav.value) {
+                    controller.removeFromWishlist(data.id, context);
+                    controller.isFav(false);
+                  } else {
+                    controller.addToWishlist(data.id, context);
+                    controller.isFav(true);
+                  }
+                },
+                icon: Icon(
+                  Icons.favorite_outlined,
+                  color: controller.isFav.value ? redColor : Colors.black,
+                ),
               ),
-            )),
+            ),
           ],
         ),
         body: Column(
@@ -87,7 +88,8 @@ class ChickItemDetails extends StatelessWidget {
                         return Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           child: ClipRRect(
-                            borderRadius: BorderRadius.circular(16), // Adjust the radius as needed
+                            borderRadius: BorderRadius.circular(
+                                16), // Adjust the radius as needed
                             child: Image.network(
                               data["p_images"][index],
                               width: double.infinity,
@@ -105,7 +107,8 @@ class ChickItemDetails extends StatelessWidget {
                       children: [
                         Container(
                           width: mq.size.width,
-                          height: mq.size.height * 0.47, // 20% of the screen height
+                          height:
+                              mq.size.height * 0.47, // 20% of the screen height
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: const BorderRadius.only(
@@ -127,8 +130,8 @@ class ChickItemDetails extends StatelessWidget {
                           left: 0,
                           top: 0,
                           child: Padding(
-                            padding: const EdgeInsets.fromLTRB(
-                                16.0, 16.0, 16.0, 0), // 16 pixels top, 16 pixels horizontal
+                            padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0,
+                                0), // 16 pixels top, 16 pixels horizontal
                             child: title!.text
                                 .size(18)
                                 .color(Colors.black)
@@ -166,12 +169,14 @@ class ChickItemDetails extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(20.0, 75.0, 5.0, 0),
+                          padding:
+                              const EdgeInsets.fromLTRB(20.0, 75.0, 5.0, 0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-
-                              const SizedBox(height: 10), // Add some spacing between text and image
+                              const SizedBox(
+                                  height:
+                                      10), // Add some spacing between text and image
                               Image.asset(
                                 'assets/images/Subtract1.png',
                                 width: 100.0,
@@ -192,7 +197,7 @@ class ChickItemDetails extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                                 style: const TextStyle(
                                   color: Colors.black,
-                                  fontSize: 22,
+                                  fontSize: 20,
                                 ),
                               ),
                             ],
@@ -204,23 +209,26 @@ class ChickItemDetails extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              "Sex".text
+                              "Sex"
+                                  .text
                                   .color(Colors.black)
-                                  .fontFamily(semibold).size(16)
+                                  .fontFamily(semibold)
+                                  .size(14)
                                   .make(),
                               10.heightBox,
-
                             ],
                           ),
                         ),
 
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(135.0, 75.0, 15.0, 13.0),
+                          padding: const EdgeInsets.fromLTRB(
+                              135.0, 75.0, 15.0, 13.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-
-                              const SizedBox(height: 10), // Add some spacing between text and image
+                              const SizedBox(
+                                  height:
+                                      10), // Add some spacing between text and image
                               Image.asset(
                                 'assets/images/Subtract2.png',
                                 width: 100.0,
@@ -241,7 +249,7 @@ class ChickItemDetails extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                                 style: const TextStyle(
                                   color: Colors.black,
-                                  fontSize: 22,
+                                  fontSize: 20,
                                 ),
                               ),
                             ],
@@ -253,22 +261,25 @@ class ChickItemDetails extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              "Age".text
+                              "Age"
+                                  .text
                                   .color(Colors.black)
-                                  .fontFamily(semibold).size(16)
+                                  .fontFamily(semibold)
+                                  .size(14)
                                   .make(),
                               10.heightBox,
-
                             ],
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(250.0, 75.0, 15.0, 13.0),
+                          padding: const EdgeInsets.fromLTRB(
+                              250.0, 75.0, 15.0, 13.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-
-                              const SizedBox(height: 10), // Add some spacing between text and image
+                              const SizedBox(
+                                  height:
+                                      10), // Add some spacing between text and image
                               Image.asset(
                                 'assets/images/Subtract3.png',
                                 width: 100.0,
@@ -289,7 +300,7 @@ class ChickItemDetails extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                                 style: const TextStyle(
                                   color: Colors.black,
-                                  fontSize: 22,
+                                  fontSize: 20,
                                 ),
                               ),
                             ],
@@ -301,12 +312,13 @@ class ChickItemDetails extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              "Weight".text
+                              "Weight"
+                                  .text
                                   .color(Colors.black)
-                                  .fontFamily(semibold).size(16)
+                                  .fontFamily(semibold)
+                                  .size(14)
                                   .make(),
-                              10.heightBox,
-
+                              // 10.heightBox,
                             ],
                           ),
                         ),
@@ -314,7 +326,8 @@ class ChickItemDetails extends StatelessWidget {
                           top: 10.0,
                           left: 0.0,
                           child: Padding(
-                            padding: const EdgeInsets.fromLTRB(16.0, 195.0, 15.0, 13.0),
+                            padding: const EdgeInsets.fromLTRB(
+                                16.0, 195.0, 15.0, 13.0),
                             child: Container(
                               width: 350.0,
                               child: Column(
@@ -343,34 +356,29 @@ class ChickItemDetails extends StatelessWidget {
                             ),
                           ),
                         ),
+
                         Positioned(
                           left: 20,
                           right: 0,
                           bottom: 0,
                           child: Padding(
-                            padding: const EdgeInsets.fromLTRB(10.0, 200.0, 50.0, 13.0),
+                            padding: const EdgeInsets.fromLTRB(
+                                10.0, 200.0, 50.0, 13.0),
                             child: ourButton(
                               color: punk,
                               textColor: whiteColor,
                               title: "Adopt Now",
                               onPress: () {},
                               onpress: () {
-                                _showBottomSheet(context, data);
+                                _showBottomSheet(context);
                                 VxToast.show(context, msg: "Adopt Now");
-
                               },
                             ),
                           ),
                         ),
-
-
-
                       ],
-
                     ),
                   ),
-
-
                 ],
               ),
             ),
@@ -379,131 +387,131 @@ class ChickItemDetails extends StatelessWidget {
       ),
     );
   }
-}
 
+  void _showBottomSheet(BuildContext context) {
+    final mq = MediaQuery.of(context).size; // Initialize mq here
 
-void _showBottomSheet(BuildContext context, Map<String, dynamic> data) {
-  final mq = MediaQuery.of(context).size; // Initialize mq here
-
-  showModalBottomSheet(
-    context: context,
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.only(
-        topLeft: Radius.circular(20),
-        topRight: Radius.circular(20),
-      ),
-    ),
-    builder: (_) {
-      return ListView(
-        shrinkWrap: true,
-        padding: EdgeInsets.only(
-          top: mq.height * .03,
-          bottom: mq.height * .05,
+    showModalBottomSheet(
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
         ),
-        children: [
-          // Code for email Information
-          Center(
-            child: SizedBox(
-              height: 50, // Height of the button
-              width: 350, // Width of the button
-              child: ElevatedButton.icon(
-                onPressed: () {
-                  // Copy the text to the clipboard
-                  Clipboard.setData(ClipboardData(text: data["p_email"]));
-                  // Show a message indicating that the text has been copied
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                    content: Text('Email copied to clipboard'),
-                  ));
-                  // Optional: Add your button onPressed logic here
-                  print('Email button pressed');
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFFFFFFF),
-                ),
-                label: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const SizedBox(width: 8), // Adjust the space between icon and text
-                    Text(
-                      // Replace 'data[""]' with your dynamic data
-                      data["p_email"],
-                      style: const TextStyle(fontSize: 16, color: Colors.black),
-                    ),
-                  ],
-                ),
-                icon: const Icon(
-                  Icons.copy,
-                  size: 20,
-                  color: Colors.black,
+      ),
+      builder: (_) {
+        return ListView(
+          shrinkWrap: true,
+          padding: EdgeInsets.only(
+            top: mq.height * .03,
+            bottom: mq.height * .05,
+          ),
+          children: [
+// Code for a email Information
+            Center(
+              child: SizedBox(
+                height: 50, // Height of the button
+                width: 350, // Width of the button
+                child: ElevatedButton.icon(
+                  onPressed: () {
+                    // Copy the text to the clipboard
+                    Clipboard.setData(ClipboardData(text: data["p_email"]));
+                    // Show a message indicating that the text has been copied
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text('Text copied to clipboard'),
+                    ));
+                    // Optional: Add your button onPressed logic here
+                    print('Button pressed');
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFFFFFFFF),
+                  ),
+                  label: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const SizedBox(
+                          width: 8), // Adjust the space between icon and text
+                      Text(
+                        // Replace 'data[""]' with your dynamic data
+                        data["p_email"],
+                        style:
+                            const TextStyle(fontSize: 16, color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  icon: const Icon(
+                    Icons.copy,
+                    size: 20,
+                    color: Colors.black,
+                  ),
                 ),
               ),
             ),
-          ),
-          10.heightBox,
-          // Code for phone Information
-          Center(
-            child: SizedBox(
-              height: 50, // Height of the button
-              width: 350, // Width of the button
-              child: ElevatedButton.icon(
-                onPressed: () {
-                  // Copy the text to the clipboard
-                  Clipboard.setData(ClipboardData(text: data["p_phoneNum"]));
-                  // Show a message indicating that the text has been copied
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                    content: Text('Phone number copied to clipboard'),
-                  ));
-                  // Optional: Add your button onPressed logic here
-                  print('Phone button pressed');
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFFFFFFF),
-                ),
-                label: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const SizedBox(width: 8), // Adjust the space between icon and text
-                    Text(
-                      // Replace 'data[""]' with your dynamic data
-                      data["p_phoneNum"],
-                      style: const TextStyle(fontSize: 16, color: Colors.black),
-                    ),
-                  ],
-                ),
-                icon: const Icon(
-                  Icons.phone,
-                  size: 20,
-                  color: Colors.black,
-                ),
-              ),
-            ),
-          ),
-          // text field
-          10.heightBox,
-          // buttons
-          Center(
-            child: SizedBox(
-              height: 50, // Height of the button
-              width: 300, // Width of the button
-              child: ElevatedButton(
-                onPressed: () {
-                  // Add your button onPressed logic here
-                  Get.to(() => const MessageScreen());
-                  print('Button pressed');
-                },
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFCA7867)),
-                child: const Text(
-                  'Message',
-                  style: TextStyle(fontSize: 16,color: Colors.white),
+            10.heightBox,
+// Code for a phone  Information
+            Center(
+              child: SizedBox(
+                height: 50, // Height of the button
+                width: 350, // Width of the button
+                child: ElevatedButton.icon(
+                  onPressed: () {
+                    // Copy the text to the clipboard
+                    Clipboard.setData(ClipboardData(text: data["p_phoneNum"]));
+                    // Show a message indicating that the text has been copied
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text('Text copied to clipboard'),
+                    ));
+                    // Optional: Add your button onPressed logic here
+                    print('Button pressed');
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFFFFFFFF),
+                  ),
+                  label: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const SizedBox(
+                          width: 8), // Adjust the space between icon and text
+                      Text(
+                        // Replace 'data[""]' with your dynamic data
+                        data["p_phoneNum"],
+                        style:
+                            const TextStyle(fontSize: 16, color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  icon: const Icon(
+                    Icons.phone,
+                    size: 20,
+                    color: Colors.black,
+                  ),
                 ),
               ),
             ),
-          ),
-          // Additional widgets can be added here
-          // Text fields, buttons, etc.
-        ],
-      );
-    },
-  );
+
+            10.heightBox,
+            Center(
+              child: SizedBox(
+                height: 50, // Height of the button
+                width: 300, // Width of the button
+                child: ElevatedButton(
+                  onPressed: () {
+                    // Add your button onPressed logic here
+                    Get.to(() => const MessageScreen());
+                    print('Button pressed');
+                  },
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFCA7867)),
+                  child: const Text(
+                    'Message',
+                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
 }

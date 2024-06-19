@@ -39,13 +39,16 @@ class _SignupScreenState extends State<SignupScreen> {
   bool isConfirmPasswordVisible = false;
 
   // Email validation
+  // ignore: non_constant_identifier_names
   final EMAIL_VALIDATION_REGEX = RegExp(r"^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$");
 
   // Password validation
-  final PASSWORD_VALIDATION_REGEX = RegExp(
-      r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$");
+  // ignore: non_constant_identifier_names
+  final PASSWORD_VALIDATION_REGEX =
+      RegExp(r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$");
 
   // Name validation
+  // ignore: non_constant_identifier_names
   final NAME_VALIDATION_REGEX = RegExp(r"\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+");
 
   final _formKey = GlobalKey<FormState>();
@@ -107,7 +110,8 @@ class _SignupScreenState extends State<SignupScreen> {
                           validator: (value) {
                             if (value == null || value.isEmpty) {
                               return 'Please enter your email';
-                            } else if (!EMAIL_VALIDATION_REGEX.hasMatch(value)) {
+                            } else if (!EMAIL_VALIDATION_REGEX
+                                .hasMatch(value)) {
                               return 'Please enter a valid email';
                             }
                             return null;
@@ -120,11 +124,13 @@ class _SignupScreenState extends State<SignupScreen> {
                           title: password,
                           controller: passwordController,
                           isPass: true,
-                          validationRegulatorExpression: PASSWORD_VALIDATION_REGEX,
+                          validationRegulatorExpression:
+                              PASSWORD_VALIDATION_REGEX,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
                               return 'Please enter your password';
-                            } else if (!PASSWORD_VALIDATION_REGEX.hasMatch(value)) {
+                            } else if (!PASSWORD_VALIDATION_REGEX
+                                .hasMatch(value)) {
                               return 'Password must contain at least 8 characters, including upper/lower case and numbers';
                             }
                             return null;
@@ -141,7 +147,8 @@ class _SignupScreenState extends State<SignupScreen> {
                           title: ConfirmPassword,
                           controller: confirmPasswordController,
                           isPass: true,
-                          validationRegulatorExpression: PASSWORD_VALIDATION_REGEX,
+                          validationRegulatorExpression:
+                              PASSWORD_VALIDATION_REGEX,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
                               return 'Please confirm your password';
@@ -152,7 +159,8 @@ class _SignupScreenState extends State<SignupScreen> {
                           },
                           toggleVisibility: () {
                             setState(() {
-                              isConfirmPasswordVisible = !isConfirmPasswordVisible;
+                              isConfirmPasswordVisible =
+                                  !isConfirmPasswordVisible;
                             });
                           },
                           isPasswordVisible: isConfirmPasswordVisible,
@@ -244,15 +252,19 @@ class _SignupScreenState extends State<SignupScreen> {
                               }
                             } else {
                               VxToast.show(context,
-                                  msg: 'Please accept the terms and conditions');
+                                  msg:
+                                      'Please accept the terms and conditions');
                             }
                           },
                           onPress: () {},
                         ).box.width(screenWidth - 30).make(),
                         10.heightBox,
                       ],
-                    ).box.padding(const EdgeInsets.all(16)).width(
-                        screenWidth - 30).make(),
+                    )
+                        .box
+                        .padding(const EdgeInsets.all(16))
+                        .width(screenWidth - 30)
+                        .make(),
                     10.heightBox,
                     RichText(
                       text: const TextSpan(
@@ -268,7 +280,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         ],
                       ),
                     ).onTap(() {
-                      Get.to(() => LoginScreen());
+                      Get.to(() => const LoginScreen());
                     }),
                   ],
                 ),
@@ -295,7 +307,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 ],
               );
             } else {
-              return SizedBox.shrink();
+              return const SizedBox.shrink();
             }
           }),
         ],

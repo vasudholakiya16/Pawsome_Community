@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     if (FirebaseAuth.instance.currentUser == null) {
-      Get.to(() => LoginScreen());
+      Get.to(() =>const LoginScreen());
     }
     super.initState();
   }

@@ -5,11 +5,9 @@ import 'package:pass_app_ultron_techonology/forgatPassScreen/phone.dart';
 
 import 'package:pinput/pinput.dart';
 
-
 import 'package:velocity_x/velocity_x.dart';
 
 import '../consts/firebase_constent.dart';
-import 'change_password_screen.dart';
 
 class Myotp extends StatefulWidget {
   const Myotp({super.key});

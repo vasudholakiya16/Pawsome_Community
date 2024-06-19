@@ -3,9 +3,8 @@ import 'package:get/get.dart';
 import 'package:pass_app_ultron_techonology/Auth_screen/loginscreen.dart';
 import '../consts/colors.dart';
 
-
 class Skip3 extends StatefulWidget {
-  const Skip3({Key? key}) : super(key: key);
+  const Skip3({super.key});
 
   @override
   State<Skip3> createState() => _Skip2State();
@@ -27,7 +26,7 @@ class _Skip2State extends State<Skip3> {
                   width: double.infinity,
                   height: mq.size.height * 0.45,
                   decoration: const BoxDecoration(
-                    color:punk,
+                    color: punk,
                     borderRadius: BorderRadius.vertical(
                       bottom: Radius.circular(700),
                     ),
@@ -70,7 +69,7 @@ class _Skip2State extends State<Skip3> {
                             width: mq.size.width * 0.015,
                             height: mq.size.height * 0.015,
                             decoration: const ShapeDecoration(
-                              color:Color(0xFFD9D9D9),
+                              color: Color(0xFFD9D9D9),
                               shape: CircleBorder(),
                             ),
                           ),
@@ -133,7 +132,7 @@ class _Skip2State extends State<Skip3> {
                   alignment: const Alignment(0.8, 0.9),
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(() =>  LoginScreen());
+                      Get.to(() => const LoginScreen());
                     },
                     child: Container(
                       width: mq.size.width * 0.15,
@@ -156,7 +155,7 @@ class _Skip2State extends State<Skip3> {
                   alignment: const Alignment(-3.0, 1.0),
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(() =>  LoginScreen());
+                      Get.to(() => const LoginScreen());
                     },
                     child: SizedBox(
                       width: mq.size.width * 0.75,

@@ -15,10 +15,10 @@ class productController extends GetxController {
   getSubCategories(title) async {
     subcat.clear();
     var data =
-    await rootBundle.loadString("lib/Services/categories_model.json");
+        await rootBundle.loadString("lib/Services/categories_model.json");
     var decoded = categoryModelFromJson(data);
     var s =
-    decoded.categories.where((element) => element.name == title).toList();
+        decoded.categories.where((element) => element.name == title).toList();
     for (var e in s[0].subcategory) {
       subcat.add(e);
     }
@@ -45,7 +45,7 @@ class productController extends GetxController {
   // }
 
   addToCart(
-      {title, img, sellerName, sex, qty, weight,height, context, age}) async {
+      {title, img, sellerName, sex, qty, weight, height, context, age}) async {
     await firestore.collection(cartCollections).doc().set({
       'title': title,
       'img': img,
@@ -54,9 +54,7 @@ class productController extends GetxController {
       'age': age,
       'weight': weight,
       'height': height,
-
       'added_by': currentUser!.uid,
-
     }).catchError((error) {
       VxToast.show(context, msg: error.toString());
     });
@@ -85,6 +83,7 @@ class productController extends GetxController {
     isFav(false);
     VxToast.show(context, msg: "Removed from wishlist");
   }
+
 // checkIfFav(data) async{
 //   if(data['p_wishlist'].contins(currentUser!.uid)){
 //     isFav(true);

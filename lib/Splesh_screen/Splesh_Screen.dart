@@ -7,7 +7,7 @@ import 'package:pass_app_ultron_techonology/consts/firebase_constent.dart';
 import '../consts/colors.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -59,7 +59,8 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
           Positioned(
-            left: (mq.size.width - 350) / 2, // Center horizontally with a bit of space
+            left: (mq.size.width - 350) /
+                2, // Center horizontally with a bit of space
             top: 330, // Position at the top
             child: Container(
               width: 350,
@@ -113,8 +114,14 @@ class _SplashScreenState extends State<SplashScreen> {
                       borderRadius: BorderRadius.only(
                         topLeft: const Radius.circular(-300),
                         topRight: const Radius.circular(-300),
-                        bottomLeft: Radius.elliptical(mq.size.width * 0.8, mq.size.height * 0.10), // Adjusted for dynamic values
-                        bottomRight: Radius.elliptical(mq.size.width * 0.8, mq.size.height * 0.10), // Adjusted for dynamic values
+                        bottomLeft: Radius.elliptical(
+                            mq.size.width * 0.8,
+                            mq.size.height *
+                                0.10), // Adjusted for dynamic values
+                        bottomRight: Radius.elliptical(
+                            mq.size.width * 0.8,
+                            mq.size.height *
+                                0.10), // Adjusted for dynamic values
                       ),
                       boxShadow: [
                         BoxShadow(
@@ -149,7 +156,6 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
           ),
-
           Positioned(
             left: mq.size.width * 0.10, // 8% of the screen width
             top: mq.size.height * 0.94, // 78% of the screen height

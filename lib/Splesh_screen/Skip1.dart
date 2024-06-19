@@ -4,11 +4,10 @@ import 'package:pass_app_ultron_techonology/Auth_screen/loginscreen.dart';
 import 'package:pass_app_ultron_techonology/Splesh_screen/Skip2.dart';
 import 'package:pass_app_ultron_techonology/consts/images.dart';
 
-
 import '../consts/colors.dart';
 
 class Skip1 extends StatefulWidget {
-  const Skip1({Key? key}) : super(key: key);
+  const Skip1({super.key});
 
   @override
   State<Skip1> createState() => _Skip1State();
@@ -142,7 +141,7 @@ class _Skip1State extends State<Skip1> {
                       width: mq.size.width * 0.15,
                       height: mq.size.height * 0.07,
                       decoration: ShapeDecoration(
-                        color:  punk,
+                        color: punk,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50),
                         ),
@@ -159,7 +158,7 @@ class _Skip1State extends State<Skip1> {
                   alignment: const Alignment(-3.0, 1.0),
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(() =>  LoginScreen());
+                      Get.to(() => const LoginScreen());
                     },
                     child: SizedBox(
                       width: mq.size.width * 0.75,

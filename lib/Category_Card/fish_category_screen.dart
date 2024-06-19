@@ -16,7 +16,8 @@ class FishCategoryScreen extends StatelessWidget {
     var controller = Get.put(productController());
     return Scaffold(
       appBar: AppBar(
-        title: title.text.fontFamily(bold).color(const Color(0xFFCA7867)).make(),
+        title:
+            title.text.fontFamily(bold).color(const Color(0xFFCA7867)).make(),
       ),
       body: Container(
         padding: const EdgeInsets.all(30),
@@ -41,7 +42,7 @@ class FishCategoryScreen extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                     10.heightBox,
-                    "${fishCategoriesList[index]}"
+                    fishCategoriesList[index]
                         .text
                         .black
                         .align(TextAlign.center)
@@ -55,8 +56,8 @@ class FishCategoryScreen extends StatelessWidget {
                     .outerShadow2Xl
                     .make()
                     .onTap(() {
-
-                  Get.to(() => FishDogCategoryDetail(title: fishCategoriesList[index]));
+                  Get.to(() =>
+                      FishDogCategoryDetail(title: fishCategoriesList[index]));
                 });
               })),
         ),

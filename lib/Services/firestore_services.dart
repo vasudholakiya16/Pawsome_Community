@@ -1,7 +1,6 @@
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../consts/firebase_constent.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class FireStoreServices {
   static getUser(uid) {
@@ -21,9 +20,6 @@ class FireStoreServices {
         .snapshots();
   }
 
-
-
-
   static getSubCategoryProduct(title) {
     return firestore
         .collection(productCollections)
@@ -34,7 +30,7 @@ class FireStoreServices {
   // get workout
   static getWorkout(workout) {
     return firestore
-        .collection(workoutCollections)
+        .collection(productCollections)
         .where('w_category', isEqualTo: workout)
         .snapshots();
   }
@@ -59,23 +55,21 @@ class FireStoreServices {
     return firestore.collection(cartCollections).doc(docId).delete();
   }
 
-
-
-  Future<void> addProduct(String name, double price, String category, List<String> images) async {
-    CollectionReference products = FirebaseFirestore.instance.collection('products');
+  Future<void> addProduct(
+      String name, double price, String category, List<String> images) async {
+    CollectionReference products =
+        FirebaseFirestore.instance.collection('products');
 
     return products
         .add({
-      'product_name': name,
-      'p_price': price,
-      'category': category,
-      'p_images': images,
-    })
+          'product_name': name,
+          'p_price': price,
+          'category': category,
+          'p_images': images,
+        })
         .then((value) => print("Product Added"))
         .catchError((error) => print("Failed to add product: $error"));
   }
-
-
 
   static getWishlist() {
     return firestore
@@ -83,7 +77,6 @@ class FireStoreServices {
         .where('p_wishlist', arrayContains: currentUser!.uid)
         .snapshots();
   }
-
 
   static getCounts() async {
     var res = await Future.wait([

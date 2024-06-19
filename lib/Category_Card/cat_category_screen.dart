@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
+
 import '../consts/list.dart';
 import '../consts/styles.dart';
 import '../controller/product_controller.dart';
@@ -17,7 +18,8 @@ class CatCategoryScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFFFF0EA),
       appBar: AppBar(
-        title: title.text.fontFamily(bold).color(const Color(0xFFCA7867)).make(),
+        title:
+            title.text.fontFamily(bold).color(const Color(0xFFCA7867)).make(),
       ),
       body: Container(
         padding: const EdgeInsets.all(30),
@@ -42,7 +44,7 @@ class CatCategoryScreen extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                     10.heightBox,
-                    "${catCategoriesList[index]}"
+                    catCategoriesList[index]
                         .text
                         .black
                         .align(TextAlign.center)
@@ -56,8 +58,8 @@ class CatCategoryScreen extends StatelessWidget {
                     .outerShadow2Xl
                     .make()
                     .onTap(() {
-
-                  Get.to(() => CatDogCategoryDetail(title: catCategoriesList[index]));
+                  Get.to(() =>
+                      CatDogCategoryDetail(title: catCategoriesList[index]));
                 });
               })),
         ),

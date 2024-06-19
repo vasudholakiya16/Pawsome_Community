@@ -12,17 +12,13 @@ import 'package:pass_app_ultron_techonology/consts/strings.dart';
 import 'package:pass_app_ultron_techonology/consts/styles.dart';
 import 'package:pass_app_ultron_techonology/controller/authcontroller.dart';
 import 'package:velocity_x/velocity_x.dart';
-
-
-
 import '../forgatPassScreen/ForgotPasswordScreen.dart';
-
 import '../same_code/customText.dart';
 import '../same_code/dialogs.dart';
 import '../same_code/outButton.dart';
 import '../same_code/splesh_screen_img.dart';
-import 'Database_Services.dart';
-import 'Signin_with_Other_option.dart';
+import 'database_Services.dart';
+import 'signin_with_Other_option.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -52,12 +48,14 @@ class _LoginScreenState extends State<LoginScreen> {
   bool isConfirmPasswordVisible = false;
 
   // Email validation
+  // ignore: non_constant_identifier_names
   final RegExp EMAIL_VALIDATION_REGEX =
-  RegExp(r"^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$");
+      RegExp(r"^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$");
 
   // Password validation
+  // ignore: non_constant_identifier_names
   final RegExp PASSWORD_VALIDATION_REGEX =
-  RegExp(r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$");
+      RegExp(r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$");
 
   // handles google login button click
   _handleGoogleBtnClick() {
@@ -93,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
       // Obtain the auth details from the request
       final GoogleSignInAuthentication? googleAuth =
-      await googleUser?.authentication;
+          await googleUser?.authentication;
 
       // Create a new credential
       final credential = GoogleAuthProvider.credential(
@@ -113,7 +111,6 @@ class _LoginScreenState extends State<LoginScreen> {
       return null;
     }
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -136,30 +133,31 @@ class _LoginScreenState extends State<LoginScreen> {
                   5.heightBox,
                   " Use Credential to Access Your Account"
                       .text
-
                       .gray700
                       .size(15)
                       .make(),
                   5.heightBox,
                   Obx(
-                        () => Column(
+                    () => Column(
                       children: [
                         customTextField(
                           hint: emailHint,
                           title: email,
                           isPass: false,
                           controller: controller.emailController,
-                          validationRegulatorExpression: EMAIL_VALIDATION_REGEX,  validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Please confirm your password';
-                          } else if (value != passwordController.text) {
-                            return 'Passwords do not match';
-                          }
-                          return null;
-                        },
+                          validationRegulatorExpression: EMAIL_VALIDATION_REGEX,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please confirm your password';
+                            } else if (value != passwordController.text) {
+                              return 'Passwords do not match';
+                            }
+                            return null;
+                          },
                           toggleVisibility: () {
                             setState(() {
-                              isConfirmPasswordVisible = !isConfirmPasswordVisible;
+                              isConfirmPasswordVisible =
+                                  !isConfirmPasswordVisible;
                             });
                           },
                           isPasswordVisible: false,
@@ -169,17 +167,20 @@ class _LoginScreenState extends State<LoginScreen> {
                           title: password,
                           isPass: true,
                           controller: controller.passwordController,
-                          validationRegulatorExpression: PASSWORD_VALIDATION_REGEX,  validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Please confirm your password';
-                          } else if (value != passwordController.text) {
-                            return 'Passwords do not match';
-                          }
-                          return null;
-                        },
+                          validationRegulatorExpression:
+                              PASSWORD_VALIDATION_REGEX,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please confirm your password';
+                            } else if (value != passwordController.text) {
+                              return 'Passwords do not match';
+                            }
+                            return null;
+                          },
                           toggleVisibility: () {
                             setState(() {
-                              isConfirmPasswordVisible = !isConfirmPasswordVisible;
+                              isConfirmPasswordVisible =
+                                  !isConfirmPasswordVisible;
                             });
                           },
                           isPasswordVisible: isConfirmPasswordVisible,
@@ -191,34 +192,33 @@ class _LoginScreenState extends State<LoginScreen> {
                               Get.to(() => const ForgotPasswordScreen());
                             },
                             style: ButtonStyle(
-                              foregroundColor: MaterialStateProperty.all<Color>(const Color(0xFFCA7867)), // Change color here
+                              foregroundColor: MaterialStateProperty.all<Color>(
+                                  const Color(0xFFCA7867)), // Change color here
                             ),
                             child: const Text('Forgot Password'),
                           ),
                         ),
-
                         controller.isloading.value
                             ? Container() // Placeholder for loading indicator
                             : ourButton(
-                          color: const Color(0xFFCA7867),
-                          title: login,
-                          textColor: whiteColor,
-                          onpress: () async {
-                            controller.isloading(true);
-                            await controller
-                                .loginMethod(context: context)
-                                .then((value) {
-                              if (value != null) {
-                                VxToast.show(context, msg: loggedin);
-                                Get.offAll(() => const Home());
-                              } else {
-                                controller.isloading(false);
-                              }
-                            });
-                          },
-                          onPress: () {},
-                        ).box.width(screenWidth - 50).make(),
-
+                                color: const Color(0xFFCA7867),
+                                title: login,
+                                textColor: whiteColor,
+                                onpress: () async {
+                                  controller.isloading(true);
+                                  await controller
+                                      .loginMethod(context: context)
+                                      .then((value) {
+                                    if (value != null) {
+                                      VxToast.show(context, msg: loggedin);
+                                      Get.offAll(() => const Home());
+                                    } else {
+                                      controller.isloading(false);
+                                    }
+                                  });
+                                },
+                                onPress: () {},
+                              ).box.width(screenWidth - 50).make(),
                         5.heightBox,
                         10.heightBox,
                         RichText(
@@ -226,11 +226,13 @@ class _LoginScreenState extends State<LoginScreen> {
                             children: [
                               TextSpan(
                                 text: createNewAccount,
-                                style: TextStyle(fontFamily: bold, color: fontGrey),
+                                style: TextStyle(
+                                    fontFamily: bold, color: fontGrey),
                               ),
                               TextSpan(
                                 text: Signup,
-                                style: TextStyle(fontFamily: bold, color:  Color(0xFFCA7867)),
+                                style: TextStyle(
+                                    fontFamily: bold, color: Color(0xFFCA7867)),
                               ),
                             ],
                           ),
@@ -273,27 +275,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 60),
                     child: Row(
                       children: [
-                        //google login button
-                        // Positioned(
-                        //   child: SizedBox(
-                        //     width: 100, // Specify the desired width
-                        //     height: 50, // Specify the desired height
-                        //     child: ElevatedButton.icon(
-                        //       style: ElevatedButton.styleFrom(
-                        //         shape: const StadiumBorder(),
-                        //         elevation: 3,
-                        //       ),
-                        //       onPressed: _handleGoogleBtnClick,
-                        //
-                        //       icon: Image.asset('assets/images/google.png'),
-                        //       label: RichText(
-                        //         text: const TextSpan(
-                        //           style: TextStyle(color: Colors.black, fontSize: 16),
-                        //         ),
-                        //       ),
-                        //     ),
-                        //   ),
-                        // ),
                         Expanded(
                           child: GestureDetector(
                             onTap: () async {
@@ -301,13 +282,14 @@ class _LoginScreenState extends State<LoginScreen> {
                             },
                             child: Container(
                               decoration: BoxDecoration(
-                                border: Border.all(color: const Color(0xFFE8ECF4)),
+                                border:
+                                    Border.all(color: const Color(0xFFE8ECF4)),
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.all(12.0),
-                                child:
-                                Image.asset("assets/images/google.png", height: 32),
+                                child: Image.asset("assets/images/google.png",
+                                    height: 32),
                               ),
                             ),
                           ),
@@ -316,10 +298,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: GestureDetector(
                             onTap: () async {
                               // Twitter Sign-In
-                              User? user = await _authService.signInWithTwitter();
+                              User? user =
+                                  await _authService.signInWithTwitter();
                               if (user != null) {
                                 // Navigate to home screen or perform other actions
-                                print('Signed in with Twitter: ${user.displayName}');
+                                print(
+                                    'Signed in with Twitter: ${user.displayName}');
                               } else {
                                 // Handle sign-in failure
                                 print('Twitter sign-in failed');
@@ -327,13 +311,14 @@ class _LoginScreenState extends State<LoginScreen> {
                             },
                             child: Container(
                               decoration: BoxDecoration(
-                                border: Border.all(color: const Color(0xFFE8ECF4)),
+                                border:
+                                    Border.all(color: const Color(0xFFE8ECF4)),
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.all(12.0),
-                                child:
-                                Image.asset("assets/images/x.png", height: 32),
+                                child: Image.asset("assets/images/x.png",
+                                    height: 32),
                               ),
                             ),
                           ),
