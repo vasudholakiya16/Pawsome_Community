@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pass_app_ultron_techonology/Doctor_screen/Auth_screen/login_screen_doctor.dart';
 import 'package:pass_app_ultron_techonology/consts/images.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Auth_screen/loginscreen.dart';
 
@@ -72,8 +73,8 @@ class UserDoctor extends StatelessWidget {
                   alignment: const Alignment(0, -0.61),
                   child: GestureDetector(
                     onTap: () {
-                      // Get.to(() => const LoginScreen());
-                      // print('Doctor tapped!');
+                      Get.to(() => const LoginScreenDoctor());
+                      print('Doctor tapped!');
                     },
                     child: Container(
                       width: 200,

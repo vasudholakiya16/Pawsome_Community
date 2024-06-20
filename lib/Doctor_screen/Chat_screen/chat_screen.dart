@@ -6,10 +6,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
-import 'package:pass_app_ultron_techonology/Chat_screen/view_profile_screen.dart';
-
 import 'package:pass_app_ultron_techonology/consts/colors.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/apis.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/view_profile_screen.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Modle/chat_user.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Modle/message.dart';
 import 'my_data_utils.dart';

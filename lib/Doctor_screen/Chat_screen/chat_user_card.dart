@@ -1,10 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
-import 'package:pass_app_ultron_techonology/Chat_screen/chat_screen.dart';
-import 'package:pass_app_ultron_techonology/Chat_screen/my_data_utils.dart';
-import 'package:pass_app_ultron_techonology/Chat_screen/profile_dialoge.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/apis.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/chat_screen.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/my_data_utils.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/profile_dialoge.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Modle/chat_user.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Modle/message.dart';
 

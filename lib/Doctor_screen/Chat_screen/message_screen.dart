@@ -3,10 +3,10 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gallery_saver_updated/gallery_saver.dart';
-import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
-import 'package:pass_app_ultron_techonology/Chat_screen/dialoges.dart';
-import 'package:pass_app_ultron_techonology/Chat_screen/my_data_utils.dart';
 import 'package:pass_app_ultron_techonology/main.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/apis.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/dialoges.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/my_data_utils.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Modle/message.dart';
 
 // for showing single message details

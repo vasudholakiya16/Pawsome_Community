@@ -1,16 +1,16 @@
 import 'dart:developer';
 import 'dart:io';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:image_picker/image_picker.dart';
-
-import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
-
+import 'package:pass_app_ultron_techonology/Splesh_screen/selection_screen.dart';
 import 'package:pass_app_ultron_techonology/consts/colors.dart';
-import 'package:pass_app_ultron_techonology/user_screen/Auth_screen/loginscreen.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/apis.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Modle/chat_user.dart';
+
 import '../same_code/dialogs.dart';
 
 //profile screen -- to show signed in user info
@@ -71,7 +71,7 @@ class _ProfileScreenMainState extends State<ProfileScreenMain> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (_) => const LoginScreen()));
+                              builder: (_) => const UserDoctor()));
                     });
                   });
                 },

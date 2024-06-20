@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pass_app_ultron_techonology/Chat_screen/MessageScreen.dart';
-import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
 import 'package:pass_app_ultron_techonology/consts/styles.dart';
 import 'package:pass_app_ultron_techonology/user_screen/All%20Product/show_all_product.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/MessageScreen.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/apis.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Home_screen/home_screen.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Profile_screen/profile_screen.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Wishlist_screen/wishlist_screen.dart';

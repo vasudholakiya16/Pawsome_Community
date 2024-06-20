@@ -5,10 +5,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:image_picker/image_picker.dart';
-
-import 'package:pass_app_ultron_techonology/Chat_screen/apis.dart';
-import 'package:pass_app_ultron_techonology/Chat_screen/dialoges.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Auth_screen/loginscreen.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/apis.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/dialoges.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Modle/chat_user.dart';
 
 class ProfileScreen extends StatefulWidget {

@@ -7,7 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:http/http.dart';
-import 'package:pass_app_ultron_techonology/Chat_screen/notification_access_token.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/notification_access_token.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Modle/chat_user.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Modle/message.dart';
 
@@ -105,13 +105,13 @@ class APIs {
 
   // for checking if user exists or not?
   static Future<bool> userExists() async {
-    return (await firestore.collection('users').doc(user.uid).get()).exists;
+    return (await firestore.collection('Doctor').doc(user.uid).get()).exists;
   }
 
   // for adding an chat user for our conversation
   static Future<bool> addChatUser(String email) async {
     final data = await firestore
-        .collection('users')
+        .collection('Doctor')
         .where('email', isEqualTo: email)
         .get();
 
@@ -123,9 +123,9 @@ class APIs {
       log('user exists: ${data.docs.first.data()}');
 
       firestore
-          .collection('users')
+          .collection('Doctor')
           .doc(user.uid)
-          .collection('my_users')
+          .collection('my_Doctor')
           .doc(data.docs.first.id)
           .set({});
 
@@ -139,7 +139,7 @@ class APIs {
 
   // for getting current user info
   static Future<void> getSelfInfo() async {
-    await firestore.collection('users').doc(user.uid).get().then((user) async {
+    await firestore.collection('Doctor').doc(user.uid).get().then((user) async {
       if (user.exists) {
         me = ChatUser.fromJson(user.data()!);
         await getFirebaseMessagingToken();
@@ -161,7 +161,7 @@ class APIs {
         id: user.uid,
         name: user.displayName.toString(),
         email: user.email.toString(),
-        about: "Hey, I'm using We Chat!",
+        about: "Hey, I'm using We Pawsome Community!",
         image: user.photoURL.toString(),
         createdAt: time,
         isOnline: false,
@@ -169,27 +169,27 @@ class APIs {
         pushToken: '');
 
     return await firestore
-        .collection('users')
+        .collection('Doctor')
         .doc(user.uid)
         .set(chatUser.toJson());
   }
 
-  // for getting id's of known users from firestore database
+  // for getting id's of known Doctor from firestore database
   static Stream<QuerySnapshot<Map<String, dynamic>>> getMyUsersId() {
     return firestore
-        .collection('users')
+        .collection('Doctor')
         .doc(user.uid)
-        .collection('my_users')
+        .collection('my_Doctor')
         .snapshots();
   }
 
-  // for getting all users from firestore database
+  // for getting all Doctor from firestore database
   static Stream<QuerySnapshot<Map<String, dynamic>>> getAllUsers(
       List<String> userIds) {
     log('\nUserIds: $userIds');
 
     return firestore
-        .collection('users')
+        .collection('Doctor')
         .where('id',
             whereIn: userIds.isEmpty
                 ? ['']
@@ -202,16 +202,16 @@ class APIs {
   static Future<void> sendFirstMessage(
       ChatUser chatUser, String msg, Type type) async {
     await firestore
-        .collection('users')
+        .collection('Doctor')
         .doc(chatUser.id)
-        .collection('my_users')
+        .collection('my_Doctor')
         .doc(user.uid)
         .set({}).then((value) => sendMessage(chatUser, msg, type));
   }
 
   // for updating user information
   static Future<void> updateUserInfo() async {
-    await firestore.collection('users').doc(user.uid).update({
+    await firestore.collection('Doctor').doc(user.uid).update({
       'name': me.name,
       'about': me.about,
     });
@@ -236,7 +236,7 @@ class APIs {
     //updating image in firestore database
     me.image = await ref.getDownloadURL();
     await firestore
-        .collection('users')
+        .collection('Doctor')
         .doc(user.uid)
         .update({'image': me.image});
   }
@@ -245,14 +245,14 @@ class APIs {
   static Stream<QuerySnapshot<Map<String, dynamic>>> getUserInfo(
       ChatUser chatUser) {
     return firestore
-        .collection('users')
+        .collection('Doctor')
         .where('id', isEqualTo: chatUser.id)
         .snapshots();
   }
 
   // update online or last active status of user
   static Future<void> updateActiveStatus(bool isOnline) async {
-    firestore.collection('users').doc(user.uid).update({
+    firestore.collection('Doctor').doc(user.uid).update({
       'is_online': isOnline,
       'last_active': DateTime.now().millisecondsSinceEpoch.toString(),
       'push_token': me.pushToken,

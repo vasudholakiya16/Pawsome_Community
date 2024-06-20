@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pass_app_ultron_techonology/Chat_screen/view_profile_screen.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Chat_screen/view_profile_screen.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Modle/chat_user.dart';
 
 class ProfileDialog extends StatelessWidget {
