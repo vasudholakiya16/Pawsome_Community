@@ -63,6 +63,7 @@ dependencies:
   notification_channel_manager: ^0.1.1+1
   firebase_app_check: ^0.2.2+6
   logging: ^1.2.0
+  dotted_border: ^2.1.0
 
 ddev_dependencies:
   flutter_test:
