@@ -2,17 +2,17 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'package:pass_app_ultron_techonology/consts/colors.dart';
 import 'package:pass_app_ultron_techonology/consts/list.dart';
 import 'package:pass_app_ultron_techonology/consts/styles.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Category_Card/dog_item_details.dart';
+import 'package:pass_app_ultron_techonology/user_screen/Home_screen/menue_screen.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Home_screen/search_card.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Services/firestore_services.dart';
 import 'package:pass_app_ultron_techonology/user_screen/same_code/homeScreen_Image.dart';
 import 'package:pass_app_ultron_techonology/user_screen/same_code/loadingIndicator.dart';
-
 import 'package:velocity_x/velocity_x.dart';
+
 import '../Auth_screen/loginscreen.dart';
 import '../Category_Card/cat_category_screen.dart';
 import '../Category_Card/chick_category_screen.dart';
@@ -56,66 +56,67 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 GestureDetector(
                   onTap: () {
+                    Get.to(() => const MenueScreen());
                     // Get.to(() => EditProfileScreen() );
                     print('App logo tapped!');
                   },
                   child: applogoWidget1().paddingOnly(left: 20.0),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Visibility(
-                      visible: !showAddress,
-                      child: ElevatedButton(
-                        onPressed: () async {
-                          // Position position = await _getGeoLocationPosition();
-                          // location =
-                          // 'Lat: ${position.latitude} , Long: ${position.longitude}';
-                          // getAddressFromLatLong(position);
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFCA7867),
-                        ),
-                        child: const Row(
-                          children: [
-                            Icon(
-                              Icons.location_on,
-                              color: Colors.white,
-                            ),
-                            SizedBox(width: 8),
-                            Text(
-                              'Get Location',
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Visibility(
-                      visible: showAddress,
-                      child: const SizedBox(width: 10),
-                    ),
-                    Visibility(
-                      visible: showAddress,
-                      child: Row(
-                        children: [
-                          const Icon(
-                            Icons.location_on,
-                            color: punk,
-                          ),
-                          Text(
-                            address,
-                            style: const TextStyle(
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ).paddingOnly(left: screenWidth * 0.08),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                //     Visibility(
+                //       visible: !showAddress,
+                //       child: ElevatedButton(
+                //         onPressed: () async {
+                //           // Position position = await _getGeoLocationPosition();
+                //           // location =
+                //           // 'Lat: ${position.latitude} , Long: ${position.longitude}';
+                //           // getAddressFromLatLong(position);
+                //         },
+                //         style: ElevatedButton.styleFrom(
+                //           backgroundColor: const Color(0xFFCA7867),
+                //         ),
+                //         child: const Row(
+                //           children: [
+                //             Icon(
+                //               Icons.location_on,
+                //               color: Colors.white,
+                //             ),
+                //             SizedBox(width: 8),
+                //             Text(
+                //               'Get Location',
+                //               style: TextStyle(
+                //                 color: Colors.white,
+                //               ),
+                //             ),
+                //           ],
+                //         ),
+                //       ),
+                //     ),
+                //     Visibility(
+                //       visible: showAddress,
+                //       child: const SizedBox(width: 10),
+                //     ),
+                //     Visibility(
+                //       visible: showAddress,
+                //       child: Row(
+                //         children: [
+                //           const Icon(
+                //             Icons.location_on,
+                //             color: punk,
+                //           ),
+                //           Text(
+                //             address,
+                //             style: const TextStyle(
+                //               color: Colors.black,
+                //             ),
+                //           ),
+                //         ],
+                //       ),
+                //     ),
+                //   ],
+                // ).paddingOnly(left: screenWidth * 0.08),
                 const Spacer(),
                 Padding(
                   padding: const EdgeInsets.all(10.0),

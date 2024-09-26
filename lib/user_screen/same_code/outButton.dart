@@ -3,10 +3,10 @@ import 'package:pass_app_ultron_techonology/consts/styles.dart';
 
 Widget ourButton(
     {required onpress,
-      required Color color,
-      required Color textColor,
-      required String title,
-      required Null Function() onPress}) {
+    required Color color,
+    required Color textColor,
+    required String title,
+    required Null Function() onPress}) {
   return ElevatedButton(
     style: ElevatedButton.styleFrom(
       backgroundColor: color,

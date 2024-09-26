@@ -165,7 +165,14 @@ flutter:
     - assets/images/Subtract3.png
     - assets/images/rectangle.png
     - assets/images/logodoctor.png
-    - assets/images/imgBackgrounddoctor.png 
+    - assets/images/imgBackgrounddoctor.png
+    - assets/images/Menu.png 
+    - assets/images/g3.png
+    - assets/icons/home.png
+    - assets/icons/Group.png
+    - assets/icons/Favourite.png
+    - assets/icons/Vector.png
+    - assets/icons/Vector_m.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
