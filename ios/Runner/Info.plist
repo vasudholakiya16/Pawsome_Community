@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Pass App Ultron Techonology</string>
+	<string>POWSOME COMMUNITY</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -54,7 +54,8 @@
         <string></string>
         <key>CFBundleURLSchemes</key>
         <array>
-          <!-- Registered Callback URLs in TwitterApp -->
+
+       
           <string>example</string>
         </array>
       </dict>
