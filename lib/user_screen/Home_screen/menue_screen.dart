@@ -8,17 +8,15 @@ import 'package:pass_app_ultron_techonology/consts/colors.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Home_screen/home_screen.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Home_screen/search_card.dart';
 import 'package:pass_app_ultron_techonology/user_screen/Wishlist_screen/wishlist_screen.dart';
+import 'package:pass_app_ultron_techonology/user_screen/controller/authcontroller.dart';
 
-class MenueScreen extends StatefulWidget {
-  const MenueScreen({super.key});
+class MenueScreen extends StatelessWidget {
+  const MenueScreen({super.key, this.data});
+  final dynamic data;
 
-  @override
-  State<MenueScreen> createState() => _MenueScreenState();
-}
-
-class _MenueScreenState extends State<MenueScreen> {
   @override
   Widget build(BuildContext context) {
+    var controller = Get.put(AuthController());
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Stack(
@@ -71,15 +69,19 @@ class _MenueScreenState extends State<MenueScreen> {
                   ),
                   Container(
                     margin: const EdgeInsets.only(top: 100, left: 20),
-                    child: const Column(
+                    child: Column(
                       children: [
-                        Text(
-                          'Shiv Shanked',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                        Text(data != null
+                            ? data['name'] ?? 'Unknown'
+                            : 'No Data Available'),
+
+                        // Text(
+                        //   'Shiv Shanked',
+                        //   style: TextStyle(
+                        //     fontSize: 18,
+                        //     fontWeight: FontWeight.bold,
+                        //   ),
+                        // ),
                         SizedBox(height: 5),
                         Text(
                           'Welcome back ! 🔥',
@@ -156,6 +158,29 @@ class _MenueScreenState extends State<MenueScreen> {
                     ),
                     title: const Text(
                       'Favourite',
+                      style: TextStyle(),
+                    ),
+                    onTap: () {
+                      Get.to(() => const Favourite());
+                    },
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(left: 20),
+                    width: 200,
+                    alignment: Alignment.centerLeft,
+                    child: const Divider(
+                      thickness: 1,
+                      color: Colors.black,
+                    ),
+                  ),
+                  ListTile(
+                    leading: Image.asset(
+                      'assets/icons/Vector_h.png',
+                      width: 30,
+                      height: 30,
+                    ),
+                    title: const Text(
+                      'Health',
                       style: TextStyle(),
                     ),
                     onTap: () {
