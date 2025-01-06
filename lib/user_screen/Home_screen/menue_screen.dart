@@ -98,7 +98,7 @@ class MenueScreen extends StatelessWidget {
 
               // Add profile section
               const SizedBox(
-                height: 100,
+                height: 70,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -204,6 +204,30 @@ class MenueScreen extends StatelessWidget {
                     ),
                     title: const Text(
                       'Message',
+                      style: TextStyle(),
+                    ),
+                    onTap: () {
+                      //
+                      // Get.to(() => const ChatScreen(user: null));
+                    },
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(left: 20),
+                    width: 200,
+                    alignment: Alignment.centerLeft,
+                    child: const Divider(
+                      thickness: 1,
+                      color: Colors.black,
+                    ),
+                  ),
+                  ListTile(
+                    leading: Image.asset(
+                      'assets/icons/setting.png',
+                      width: 30,
+                      height: 30,
+                    ),
+                    title: const Text(
+                      'Settings',
                       style: TextStyle(),
                     ),
                     onTap: () {

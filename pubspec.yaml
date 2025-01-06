@@ -173,6 +173,8 @@ flutter:
     - assets/icons/Favourite.png
     - assets/icons/Vector.png
     - assets/icons/Vector_m.png
+    - assets/icons/Vector_h.png
+    - assets/icons/setting.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
